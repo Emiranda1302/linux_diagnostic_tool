@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linux_diagnostic_tool"
+version = "0.1.0"
+description = "Linux Diagnostic Toolkit"
+authors = [{name = "Tu Nombre"}]
+requires-python = ">=3.10"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
