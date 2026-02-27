@@ -3,11 +3,14 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "linux_diagnostic_tool"
+name = "ldt"
 version = "0.1.0"
 description = "Linux Diagnostic Toolkit"
-authors = [{name = "Tu Nombre"}]
+authors = [{name = "EMA"}]
 requires-python = ">=3.10"
+
+[project.scripts]
+ldt = "ldt.main:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

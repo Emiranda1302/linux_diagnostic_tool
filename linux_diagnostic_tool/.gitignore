@@ -1,3 +1,15 @@
-venv/
+
+
+
+
+# Ignorar carpetas de metadatos de Python
+src/*.egg-info/
+*.egg-info/
+
+# Ignorar caché de Python
 __pycache__/
 *.pyc
+
+# Ignorar carpetas de entornos virtuales (si las tienes dentro)
+venv/
+.venv/
