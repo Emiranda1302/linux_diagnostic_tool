@@ -1,15 +1,19 @@
 
-
-
-
-# Ignorar carpetas de metadatos de Python
-src/*.egg-info/
-*.egg-info/
-
-# Ignorar caché de Python
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.egg-info/
 
-# Ignorar carpetas de entornos virtuales (si las tienes dentro)
+# Entorno virtual
 venv/
-.venv/
+
+# Reportes generados
+reports/*.json
+reports/*.md
+
+# API keys
+.env
+
+# Editor
+.vscode/
