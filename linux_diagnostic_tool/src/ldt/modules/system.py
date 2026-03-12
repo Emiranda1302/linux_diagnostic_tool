@@ -3,6 +3,8 @@ Módulo de sistema.
 """
 import psutil
 import time
+import re
+import subprocess
 from datetime import datetime
 
 def get_running_processes() -> list[dict]:
@@ -75,7 +77,6 @@ def get_cpu_info()->list[dict]:
 
     return result
 
-
 def get_memory_info()-> dict:
     virtual=psutil.virtual_memory()
     swap=psutil.swap_memory()
@@ -91,6 +92,7 @@ def get_memory_info()-> dict:
         "swap_used":round(swap.used/GB,2),
         "swap_percent":swap.percent
     }
+
 def register_parser(subparsers):
 
     parser = subparsers.add_parser( 
@@ -109,8 +111,43 @@ def register_parser(subparsers):
         action="store_true",
         help="Show memory usage"
     )
+    parser.add_argument(
+        "--logins",
+        action="store_true",    
+        help="show falied login attempts"
+    )
 
     parser.set_defaults(func=run)
+
+def get_failed_logins()->list[dict]:
+    result=subprocess.run(
+        ["journalctl","-u","ssh","--no-pager"],
+        capture_output=True,
+        text=True,
+        check=True
+    )
+    log_patern=r"([A-Z][a-z]{2}\s\d{2}\s\d{2}:\d{2}:\d{2}).*?(\w+)\spassword.*?user\s(\S+)\sfrom\s(\S+)\sport\s(\d+)"
+    log_root_patern=r"([A-Z][a-z]{2}\s\d{2}\s\d{2}:\d{2}:\d{2}).*?(\w+)\spassword.*?for\s(\S+)\sfrom\s(\S+)\sport\s(\d+)"
+    
+    failed_attempts=[]
+    for line in result.stdout.splitlines():
+        match=re.search(log_patern,line)
+        if not match:
+            match=re.search(log_root_patern,line)
+        if match:   
+            timestamp,status,username,ip_address,port_num =match.groups()
+            failed_attempts.append({
+                    "timestamp":timestamp,
+                    "username":username,
+                    "status":status,
+                    "remote_ip":ip_address,
+                    "port":port_num
+                })
+            
+    return failed_attempts
+
+
+
 
 
 def run(args):
@@ -153,5 +190,30 @@ def run(args):
         # Al final de la función run
         if ram_flag or swap_flag:
             print(f"\n[ALERTA] El sistema está bajo presión de memoria.")
+    elif args.logins:
+        failed_attempts=get_failed_logins()  
+        FORMAT_SECURITY = "{:<18} {:<10} {:<15} {:<20} {:<8}"  
+        print("SECURITU LOGS -FAILEDER SSH ATETEMPTS".center(65,"="))
+        print(FORMAT_SECURITY.format("TIMESTAMP","STATUS","USERNAME","REMOTE_IP","PORT"))
+        print("-"*80)
+
+        if not failed_attempts:
+            print("NO failed attempts ","<3"*55)
+        else:
+            for attempts in failed_attempts:
+                print(FORMAT_SECURITY.format(
+                    attempts['timestamp'],
+                    attempts['status'],
+                    attempts['username'],
+                    attempts["remote_ip"],
+                    attempts['port']
+                ))    
+        if len(failed_attempts)>5:
+            print(f"\n[!] ALERT: {len(failed_attempts)} unauthorized access attempts detected.")
+
+
+
+
+
     else:
         print("No system option provided.")
