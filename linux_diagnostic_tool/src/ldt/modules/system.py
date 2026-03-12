@@ -93,6 +93,27 @@ def get_memory_info()-> dict:
         "swap_percent":swap.percent
     }
 
+def get_listening_ports()->list[dict]:
+    conections=[]
+    for conn in psutil.net_connections(kind='inet'):
+        if conn.status=='LISTEN':
+            try:
+                p=psutil.Process(conn.pid)
+                process_name=p.name()if conn.pid else "sytemkernelproces"            
+                conections.append({
+                  "process":process_name,
+                  "ip":conn.laddr.ip,
+                  "port":conn.laddr.port,
+                  "states":conn.status
+                })
+            except (psutil.NoSuchProcess,psutil.AccessDenied):
+                process_name="unknown"
+                print("no hay mai")
+    return conections
+
+
+
+
 def register_parser(subparsers):
 
     parser = subparsers.add_parser( 
@@ -116,6 +137,12 @@ def register_parser(subparsers):
         action="store_true",    
         help="show falied login attempts"
     )
+    parser.add_argument(
+        "--ports",
+        action="store_true",    
+        help="show listening ports "
+    )
+    
 
     parser.set_defaults(func=run)
 
@@ -210,10 +237,21 @@ def run(args):
                 ))    
         if len(failed_attempts)>5:
             print(f"\n[!] ALERT: {len(failed_attempts)} unauthorized access attempts detected.")
-
-
-
-
-
+    elif args.ports:
+        listening_sockets=get_listening_ports()
+        FORMAT_ports="{:<18}{:^15}{:<10}{:<18}"
+        print("ALL ACTIVE NETWORK SERVICES LINTENING FOR CONECTIONS ".center(65,"="))
+        print(FORMAT_ports.format("PROcces","ip","port","status"))
+        print("-"*80)
+        if not get_listening_ports:
+            print("NO LISTENING SOCKETS")
+        else:
+            for ports in listening_sockets:
+                  print(FORMAT_ports.format(
+                    ports['process'],
+                    ports['ip'],
+                    ports['port'],
+                    ports["states"]
+                ))
     else:
         print("No system option provided.")
