@@ -2,6 +2,60 @@ import subprocess
 import os
 import pwd
 
+MITRE = {
+    "suid":    "T1548.001 - Setuid and Setgid",
+    "cron":    "T1053.003 - Cron",
+    "bashrc":  "T1546.004 - Unix Shell Config Modification",
+    "hidden":  "T1564.001 - Hidden Files",
+    "ssh_keys":"T1098.004 - SSH Authorized Keys",
+}
+
+def check_cron_persistence() -> list[dict]:
+    cron_findings=[]
+    suspicious_keywds=["curl","wget","bash -i","base64","/tmp"]
+
+    files_to_scan=["/etc/crontab"]
+    target_dir = "/etc/cron.d/"
+    if os.path.exists(target_dir):
+        for root, dirs, files in os.walk(target_dir):
+            for name in files:
+                fullpath = os.path.join(root, name)
+                files_to_scan.append(fullpath)
+    
+
+    for path in files_to_scan:
+        try:
+            with open(path,"r") as f:
+                for num_lin,linea_original in enumerate(f,1):
+                    info=linea_original.split()
+                    if len(info)>=6:
+                        user=info[5]
+                        comand=" ".join(info[6:])
+                    else:
+                        user="unknow"
+                        comand=info
+                    if not info or info[0]=="#":
+                        continue
+                    
+                    matches=[kw for kw in suspicious_keywds if kw in linea_original]
+                    if matches:
+                        
+                        
+                        cron_findings.append({
+                            "file":path,
+                            "line":num_lin,
+                            "content":linea_original,
+                            "match":matches,
+                            "user":user,
+                            "severity":"HIGH" if user =="root" else "MEDIUM",
+                            "mitre":MITRE["cron"]
+                        })
+        except PermissionError:
+            print(F"[!] cant READ FILE [permision denied]: {path}")
+        except Exception as e:
+            print(f"[!] Error inesperado en {path}: {e}")
+    return cron_findings
+
 
 
 def find_suid_binaries()->list[dict]:
@@ -39,7 +93,7 @@ def find_suid_binaries()->list[dict]:
                     "dueno":origin,
                     "permisos":oct(stats.st_mode)[-4:],
                     "sospechosos":True,
-                    "mitre": "T1548.001 - Setuid and Setgid",
+                    "mitre":MITRE["suid"],
                     "severity":severity
                 }
                 reporte.append(info_binari)
@@ -69,7 +123,11 @@ def register_parser(subparsers):
         action="store_true",
         help="Audit the system for suspicious SUID binaries"
     )
-
+    parser.add_argument(
+        "--cron",
+        action="store_true",
+        help="Audit the system for scheduled taks and cron persistence"
+    )
     parser.set_defaults(func=run)
 
 
@@ -91,7 +149,31 @@ def run(args):
                 print(f"MITRE:   {h['mitre']}")
                                 
                 print("-" * 60)
+    elif args.cron:
+        print("\n[*] Auditing Cron Persistence Mechanisms...")
+        results = check_cron_persistence()
         
+        if not results:
+            print("[+] No suspicious cron jobs were detected.")
+        else:
+            print(f"[!] DETECTED {len(results)} SUSPICIOUS CRON ENTRIES")
+            print("=" * 80)
+
+            for h in results:
+                # Definimos una pequeña bandera visual para la severidad
+                sev_label = "[!!!]" if h['severity'] == "HIGH" else "[!]"
+                
+                print(f"STATUS:    {h['severity']} {sev_label}")
+                print(f"FILE:      {h['file']} (Line: {h['line']})")
+                print(f"USER:      {h['user']}")
+                print(f"MATCHES:   {', '.join(h['match'])}") # Une ['wget', '/tmp'] -> "wget, /tmp"
+                print(f"COMMAND:   {h['content']}")
+                print(f"MITRE:     {h['mitre']} - Scheduled Task: Cron")
+                print("-" * 80)
+
+    else:
+        print("No system option provided.")
+    
 
 
 
