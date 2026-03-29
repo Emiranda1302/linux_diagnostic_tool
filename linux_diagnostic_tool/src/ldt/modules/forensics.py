@@ -56,6 +56,44 @@ def check_cron_persistence() -> list[dict]:
             print(f"[!] Error inesperado en {path}: {e}")
     return cron_findings
 
+def check_bashrc_persistence()->list[dict]:
+    users=pwd.getpwall()
+    files_to_scan,bashrc_findings=[],[]
+    suspicious_keywds=["curl","wget","bash -i","base64","/tmp"]
+    
+    for u in users:
+        home_user=u.pw_dir
+        if u.pw_uid >=1000 or u.pw_uid==0:
+            fullpath=os.path.join(home_user,".bashrc")
+            if os.path.exists(fullpath):
+                files_to_scan.append(fullpath)
+
+    for path in files_to_scan:
+        user=path.split('/')[2]if "home" in path else "root"
+        try:
+            with open(path,"r") as f:
+                for num_lin,linea_original in enumerate(f,1):
+                    lin=linea_original.strip()
+                    if not lin or linea_original.startswith("#"):
+                        continue
+                    matches=[kw for kw in suspicious_keywds if kw in lin]
+                    if matches:
+                        bashrc_findings.append({
+                            "user":user,
+                            "file":path,
+                            "content":lin,
+                            "match":matches,
+                            "severity":"HIGH" if user=="root" else "MEDIUM",
+                            "mitre":MITRE["bashrc"]
+                        })
+        except Exception as e:
+            print(f"error leyendo {path}: {e}")
+
+    return bashrc_findings
+
+    
+
+
 
 
 def find_suid_binaries()->list[dict]:
@@ -128,6 +166,11 @@ def register_parser(subparsers):
         action="store_true",
         help="Audit the system for scheduled taks and cron persistence"
     )
+    parser.add_argument(
+        "--bashrc",
+        action="store_true",
+        help="Audit the system for bash persistence"
+    )
     parser.set_defaults(func=run)
 
 
@@ -170,7 +213,29 @@ def run(args):
                 print(f"COMMAND:   {h['content']}")
                 print(f"MITRE:     {h['mitre']} - Scheduled Task: Cron")
                 print("-" * 80)
+    elif args.bashrc:
+        print("\n[*] Auditing shell config files...")
+        result=check_bashrc_persistence()
+        if not result:
+            print("[+]NO suspicious activity found in .bashrc files")
+        else:
+            print(f"DETECTED {len(result)} SUSPICIOUS BASHRC ENTRIES")
+            print("="*80)
+            for alert in result:
+                sev_label="[!] [!]"if alert['user']=="root" else "[!]"
 
+
+                print(f"STATUS:    {alert['severity']} {sev_label}")
+                print(f"FILE:      {alert['file']}")
+                print(f"COMMAND:   {alert['content']}")
+                print(f"USER:      {alert['user']}")
+                print(f"MATCHES:   {', '.join(alert['match'])}") 
+                
+                print(f"MITRE:     {alert['mitre']}")
+                print("="*80)
+
+
+        
     else:
         print("No system option provided.")
     
