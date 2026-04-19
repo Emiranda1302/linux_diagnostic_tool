@@ -1,0 +1,5021 @@
+{
+  "timestamp": "2026-04-18T21:26:57.626931",
+  "hostname": "kali",
+  "system": {
+    "processes": [
+      {
+        "pid": 1,
+        "name": "systemd",
+        "username": "root",
+        "cmdline": "/sbin/init splash",
+        "crated_time_e": 1776556562.28,
+        "start_time": "2026-04-18 19:56:02.280000",
+        "uptime_s": 5455.35
+      },
+      {
+        "pid": 2,
+        "name": "kthreadd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.28,
+        "start_time": "2026-04-18 19:56:02.280000",
+        "uptime_s": 5455.35
+      },
+      {
+        "pid": 3,
+        "name": "pool_workqueue_release",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 4,
+        "name": "kworker/R-rcu_gp",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 5,
+        "name": "kworker/R-sync_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 6,
+        "name": "kworker/R-kvfree_rcu_reclaim",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 7,
+        "name": "kworker/R-slub_flushwq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 8,
+        "name": "kworker/R-netns",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 12,
+        "name": "kworker/u32:0-ipv6_addrconf",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 13,
+        "name": "kworker/R-mm_percpu_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 14,
+        "name": "ksoftirqd/0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 15,
+        "name": "rcu_preempt",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 16,
+        "name": "rcu_exp_par_gp_kthread_worker/0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 17,
+        "name": "rcu_exp_gp_kthread_worker",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 18,
+        "name": "migration/0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 19,
+        "name": "idle_inject/0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 20,
+        "name": "cpuhp/0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 21,
+        "name": "cpuhp/1",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 22,
+        "name": "idle_inject/1",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 23,
+        "name": "migration/1",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 24,
+        "name": "ksoftirqd/1",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 26,
+        "name": "kworker/1:0H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.42,
+        "start_time": "2026-04-18 19:56:02.420000",
+        "uptime_s": 5455.21
+      },
+      {
+        "pid": 27,
+        "name": "cpuhp/2",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 28,
+        "name": "idle_inject/2",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 29,
+        "name": "migration/2",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 30,
+        "name": "ksoftirqd/2",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 32,
+        "name": "kworker/2:0H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 33,
+        "name": "cpuhp/3",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 34,
+        "name": "idle_inject/3",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 35,
+        "name": "migration/3",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 36,
+        "name": "ksoftirqd/3",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 38,
+        "name": "kworker/3:0H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 39,
+        "name": "cpuhp/4",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 40,
+        "name": "idle_inject/4",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 41,
+        "name": "migration/4",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 42,
+        "name": "ksoftirqd/4",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 45,
+        "name": "cpuhp/5",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 46,
+        "name": "idle_inject/5",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 47,
+        "name": "migration/5",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 48,
+        "name": "ksoftirqd/5",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 51,
+        "name": "cpuhp/6",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 52,
+        "name": "idle_inject/6",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 53,
+        "name": "migration/6",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 54,
+        "name": "ksoftirqd/6",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 55,
+        "name": "kworker/6:0-mm_percpu_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 57,
+        "name": "cpuhp/7",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 58,
+        "name": "idle_inject/7",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 59,
+        "name": "migration/7",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 60,
+        "name": "ksoftirqd/7",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.43,
+        "start_time": "2026-04-18 19:56:02.430000",
+        "uptime_s": 5455.2
+      },
+      {
+        "pid": 63,
+        "name": "kworker/u33:0-kvfree_rcu_reclaim",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.47,
+        "start_time": "2026-04-18 19:56:02.470000",
+        "uptime_s": 5455.16
+      },
+      {
+        "pid": 66,
+        "name": "kworker/u36:0-kvfree_rcu_reclaim",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.47,
+        "start_time": "2026-04-18 19:56:02.470000",
+        "uptime_s": 5455.16
+      },
+      {
+        "pid": 69,
+        "name": "kworker/u39:0-kvfree_rcu_reclaim",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.47,
+        "start_time": "2026-04-18 19:56:02.470000",
+        "uptime_s": 5455.16
+      },
+      {
+        "pid": 70,
+        "name": "kworker/u40:0-events_unbound",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.47,
+        "start_time": "2026-04-18 19:56:02.470000",
+        "uptime_s": 5455.16
+      },
+      {
+        "pid": 74,
+        "name": "kdevtmpfs",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.48,
+        "start_time": "2026-04-18 19:56:02.480000",
+        "uptime_s": 5455.15
+      },
+      {
+        "pid": 75,
+        "name": "kworker/R-inet_frag_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.49,
+        "start_time": "2026-04-18 19:56:02.490000",
+        "uptime_s": 5455.14
+      },
+      {
+        "pid": 76,
+        "name": "rcu_tasks_kthread",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.49,
+        "start_time": "2026-04-18 19:56:02.490000",
+        "uptime_s": 5455.14
+      },
+      {
+        "pid": 77,
+        "name": "rcu_tasks_rude_kthread",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.49,
+        "start_time": "2026-04-18 19:56:02.490000",
+        "uptime_s": 5455.14
+      },
+      {
+        "pid": 78,
+        "name": "rcu_tasks_trace_kthread",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.49,
+        "start_time": "2026-04-18 19:56:02.490000",
+        "uptime_s": 5455.14
+      },
+      {
+        "pid": 79,
+        "name": "kauditd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.5,
+        "start_time": "2026-04-18 19:56:02.500000",
+        "uptime_s": 5455.13
+      },
+      {
+        "pid": 80,
+        "name": "khungtaskd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.5,
+        "start_time": "2026-04-18 19:56:02.500000",
+        "uptime_s": 5455.13
+      },
+      {
+        "pid": 81,
+        "name": "kworker/u33:1-kvfree_rcu_reclaim",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.5,
+        "start_time": "2026-04-18 19:56:02.500000",
+        "uptime_s": 5455.13
+      },
+      {
+        "pid": 82,
+        "name": "oom_reaper",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.5,
+        "start_time": "2026-04-18 19:56:02.500000",
+        "uptime_s": 5455.13
+      },
+      {
+        "pid": 84,
+        "name": "kworker/R-writeback",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.51,
+        "start_time": "2026-04-18 19:56:02.510000",
+        "uptime_s": 5455.12
+      },
+      {
+        "pid": 85,
+        "name": "kcompactd0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.51,
+        "start_time": "2026-04-18 19:56:02.510000",
+        "uptime_s": 5455.12
+      },
+      {
+        "pid": 86,
+        "name": "ksmd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.51,
+        "start_time": "2026-04-18 19:56:02.510000",
+        "uptime_s": 5455.12
+      },
+      {
+        "pid": 87,
+        "name": "khugepaged",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.51,
+        "start_time": "2026-04-18 19:56:02.510000",
+        "uptime_s": 5455.12
+      },
+      {
+        "pid": 88,
+        "name": "kworker/R-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.52,
+        "start_time": "2026-04-18 19:56:02.520000",
+        "uptime_s": 5455.11
+      },
+      {
+        "pid": 89,
+        "name": "kworker/R-blkcg_punt_bio",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.52,
+        "start_time": "2026-04-18 19:56:02.520000",
+        "uptime_s": 5455.11
+      },
+      {
+        "pid": 90,
+        "name": "kworker/R-kintegrityd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.52,
+        "start_time": "2026-04-18 19:56:02.520000",
+        "uptime_s": 5455.11
+      },
+      {
+        "pid": 91,
+        "name": "irq/9-acpi",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.56,
+        "start_time": "2026-04-18 19:56:02.560000",
+        "uptime_s": 5455.07
+      },
+      {
+        "pid": 94,
+        "name": "kworker/R-tpm_dev_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.6,
+        "start_time": "2026-04-18 19:56:02.600000",
+        "uptime_s": 5455.03
+      },
+      {
+        "pid": 95,
+        "name": "kworker/R-edac-poller",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.6,
+        "start_time": "2026-04-18 19:56:02.600000",
+        "uptime_s": 5455.03
+      },
+      {
+        "pid": 96,
+        "name": "kworker/R-devfreq_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.6,
+        "start_time": "2026-04-18 19:56:02.600000",
+        "uptime_s": 5455.03
+      },
+      {
+        "pid": 99,
+        "name": "kworker/R-quota_events_unbound",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.61,
+        "start_time": "2026-04-18 19:56:02.610000",
+        "uptime_s": 5455.02
+      },
+      {
+        "pid": 101,
+        "name": "kswapd0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.69,
+        "start_time": "2026-04-18 19:56:02.690000",
+        "uptime_s": 5454.94
+      },
+      {
+        "pid": 102,
+        "name": "kdamond.0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.69,
+        "start_time": "2026-04-18 19:56:02.690000",
+        "uptime_s": 5454.94
+      },
+      {
+        "pid": 106,
+        "name": "kworker/R-kthrotld",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.71,
+        "start_time": "2026-04-18 19:56:02.710000",
+        "uptime_s": 5454.92
+      },
+      {
+        "pid": 107,
+        "name": "kworker/R-acpi_thermal_pm",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.72,
+        "start_time": "2026-04-18 19:56:02.720000",
+        "uptime_s": 5454.91
+      },
+      {
+        "pid": 110,
+        "name": "kworker/R-mld",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.75,
+        "start_time": "2026-04-18 19:56:02.750000",
+        "uptime_s": 5454.88
+      },
+      {
+        "pid": 113,
+        "name": "kworker/R-ipv6_addrconf",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.75,
+        "start_time": "2026-04-18 19:56:02.750000",
+        "uptime_s": 5454.88
+      },
+      {
+        "pid": 115,
+        "name": "kworker/u32:1-ipv6_addrconf",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.76,
+        "start_time": "2026-04-18 19:56:02.760000",
+        "uptime_s": 5454.87
+      },
+      {
+        "pid": 116,
+        "name": "kworker/R-kstrp",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.76,
+        "start_time": "2026-04-18 19:56:02.760000",
+        "uptime_s": 5454.87
+      },
+      {
+        "pid": 118,
+        "name": "kworker/u35:1-events_unbound",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556562.78,
+        "start_time": "2026-04-18 19:56:02.780000",
+        "uptime_s": 5454.85
+      },
+      {
+        "pid": 120,
+        "name": "kworker/u34:1-kvfree_rcu_reclaim",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556563.31,
+        "start_time": "2026-04-18 19:56:03.310000",
+        "uptime_s": 5454.32
+      },
+      {
+        "pid": 125,
+        "name": "kworker/u41:0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.25,
+        "start_time": "2026-04-18 19:56:04.250000",
+        "uptime_s": 5453.38
+      },
+      {
+        "pid": 126,
+        "name": "kworker/u42:0-ttm",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.25,
+        "start_time": "2026-04-18 19:56:04.250000",
+        "uptime_s": 5453.38
+      },
+      {
+        "pid": 127,
+        "name": "kworker/u43:0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.25,
+        "start_time": "2026-04-18 19:56:04.250000",
+        "uptime_s": 5453.38
+      },
+      {
+        "pid": 128,
+        "name": "kworker/u44:0-ttm",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.25,
+        "start_time": "2026-04-18 19:56:04.250000",
+        "uptime_s": 5453.38
+      },
+      {
+        "pid": 129,
+        "name": "kworker/u45:0-ttm",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.25,
+        "start_time": "2026-04-18 19:56:04.250000",
+        "uptime_s": 5453.38
+      },
+      {
+        "pid": 130,
+        "name": "kworker/u46:0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.25,
+        "start_time": "2026-04-18 19:56:04.250000",
+        "uptime_s": 5453.38
+      },
+      {
+        "pid": 131,
+        "name": "kworker/u47:0-ttm",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.25,
+        "start_time": "2026-04-18 19:56:04.250000",
+        "uptime_s": 5453.38
+      },
+      {
+        "pid": 132,
+        "name": "kworker/u48:0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.25,
+        "start_time": "2026-04-18 19:56:04.250000",
+        "uptime_s": 5453.38
+      },
+      {
+        "pid": 133,
+        "name": "kworker/u49:0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.25,
+        "start_time": "2026-04-18 19:56:04.250000",
+        "uptime_s": 5453.38
+      },
+      {
+        "pid": 137,
+        "name": "kworker/u37:1-writeback",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.27,
+        "start_time": "2026-04-18 19:56:04.270000",
+        "uptime_s": 5453.36
+      },
+      {
+        "pid": 160,
+        "name": "kworker/u39:1-events_unbound",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.35,
+        "start_time": "2026-04-18 19:56:04.350000",
+        "uptime_s": 5453.28
+      },
+      {
+        "pid": 164,
+        "name": "kworker/u39:2",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.36,
+        "start_time": "2026-04-18 19:56:04.360000",
+        "uptime_s": 5453.27
+      },
+      {
+        "pid": 197,
+        "name": "kworker/0:1H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.41,
+        "start_time": "2026-04-18 19:56:04.410000",
+        "uptime_s": 5453.22
+      },
+      {
+        "pid": 232,
+        "name": "kworker/3:1H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.6,
+        "start_time": "2026-04-18 19:56:04.600000",
+        "uptime_s": 5453.03
+      },
+      {
+        "pid": 266,
+        "name": "kworker/6:1H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.69,
+        "start_time": "2026-04-18 19:56:04.690000",
+        "uptime_s": 5452.94
+      },
+      {
+        "pid": 278,
+        "name": "kworker/R-ata_sff",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556564.98,
+        "start_time": "2026-04-18 19:56:04.980000",
+        "uptime_s": 5452.65
+      },
+      {
+        "pid": 279,
+        "name": "scsi_eh_0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556565.0,
+        "start_time": "2026-04-18 19:56:05",
+        "uptime_s": 5452.63
+      },
+      {
+        "pid": 280,
+        "name": "kworker/R-scsi_tmf_0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556565.0,
+        "start_time": "2026-04-18 19:56:05",
+        "uptime_s": 5452.63
+      },
+      {
+        "pid": 281,
+        "name": "scsi_eh_1",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556565.0,
+        "start_time": "2026-04-18 19:56:05",
+        "uptime_s": 5452.63
+      },
+      {
+        "pid": 282,
+        "name": "kworker/R-scsi_tmf_1",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556565.0,
+        "start_time": "2026-04-18 19:56:05",
+        "uptime_s": 5452.63
+      },
+      {
+        "pid": 285,
+        "name": "scsi_eh_2",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556565.03,
+        "start_time": "2026-04-18 19:56:05.030000",
+        "uptime_s": 5452.6
+      },
+      {
+        "pid": 286,
+        "name": "kworker/R-scsi_tmf_2",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556565.03,
+        "start_time": "2026-04-18 19:56:05.030000",
+        "uptime_s": 5452.6
+      },
+      {
+        "pid": 288,
+        "name": "kworker/u40:1-kvfree_rcu_reclaim",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556565.51,
+        "start_time": "2026-04-18 19:56:05.510000",
+        "uptime_s": 5452.12
+      },
+      {
+        "pid": 291,
+        "name": "irq/18-vmwgfx",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556565.6,
+        "start_time": "2026-04-18 19:56:05.600000",
+        "uptime_s": 5452.03
+      },
+      {
+        "pid": 292,
+        "name": "kworker/R-ttm",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556565.6,
+        "start_time": "2026-04-18 19:56:05.600000",
+        "uptime_s": 5452.03
+      },
+      {
+        "pid": 299,
+        "name": "kworker/1:3-events",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556566.53,
+        "start_time": "2026-04-18 19:56:06.530000",
+        "uptime_s": 5451.1
+      },
+      {
+        "pid": 331,
+        "name": "jbd2/sda1-8",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556568.04,
+        "start_time": "2026-04-18 19:56:08.040000",
+        "uptime_s": 5449.59
+      },
+      {
+        "pid": 332,
+        "name": "kworker/R-ext4-rsv-conversion",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556568.04,
+        "start_time": "2026-04-18 19:56:08.040000",
+        "uptime_s": 5449.59
+      },
+      {
+        "pid": 345,
+        "name": "kworker/u40:2-writeback",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556568.29,
+        "start_time": "2026-04-18 19:56:08.290000",
+        "uptime_s": 5449.34
+      },
+      {
+        "pid": 386,
+        "name": "psimon",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556569.87,
+        "start_time": "2026-04-18 19:56:09.870000",
+        "uptime_s": 5447.76
+      },
+      {
+        "pid": 396,
+        "name": "systemd-journald",
+        "username": "root",
+        "cmdline": "/usr/lib/systemd/systemd-journald",
+        "crated_time_e": 1776556569.94,
+        "start_time": "2026-04-18 19:56:09.940000",
+        "uptime_s": 5447.69
+      },
+      {
+        "pid": 405,
+        "name": "kworker/u35:2-flush-8:0",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556569.99,
+        "start_time": "2026-04-18 19:56:09.990000",
+        "uptime_s": 5447.64
+      },
+      {
+        "pid": 435,
+        "name": "systemd-udevd",
+        "username": "root",
+        "cmdline": "/usr/lib/systemd/systemd-udevd",
+        "crated_time_e": 1776556570.16,
+        "start_time": "2026-04-18 19:56:10.160000",
+        "uptime_s": 5447.47
+      },
+      {
+        "pid": 439,
+        "name": "systemd-userdbd",
+        "username": "root",
+        "cmdline": "/usr/lib/systemd/systemd-userdbd",
+        "crated_time_e": 1776556570.35,
+        "start_time": "2026-04-18 19:56:10.350000",
+        "uptime_s": 5447.28
+      },
+      {
+        "pid": 443,
+        "name": "psimon",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556570.41,
+        "start_time": "2026-04-18 19:56:10.410000",
+        "uptime_s": 5447.22
+      },
+      {
+        "pid": 444,
+        "name": "psimon",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556570.71,
+        "start_time": "2026-04-18 19:56:10.710000",
+        "uptime_s": 5446.92
+      },
+      {
+        "pid": 569,
+        "name": "haveged",
+        "username": "root",
+        "cmdline": "/usr/sbin/haveged --Foreground --verbose=1",
+        "crated_time_e": 1776556571.41,
+        "start_time": "2026-04-18 19:56:11.410000",
+        "uptime_s": 5446.22
+      },
+      {
+        "pid": 578,
+        "name": "accounts-daemon",
+        "username": "root",
+        "cmdline": "/usr/libexec/accounts-daemon",
+        "crated_time_e": 1776556571.44,
+        "start_time": "2026-04-18 19:56:11.440000",
+        "uptime_s": 5446.19
+      },
+      {
+        "pid": 580,
+        "name": "dbus-daemon",
+        "username": "messagebus",
+        "cmdline": "/usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only",
+        "crated_time_e": 1776556571.44,
+        "start_time": "2026-04-18 19:56:11.440000",
+        "uptime_s": 5446.19
+      },
+      {
+        "pid": 586,
+        "name": "polkitd",
+        "username": "polkitd",
+        "cmdline": "/usr/lib/polkit-1/polkitd --no-debug --log-level=notice",
+        "crated_time_e": 1776556571.46,
+        "start_time": "2026-04-18 19:56:11.460000",
+        "uptime_s": 5446.17
+      },
+      {
+        "pid": 587,
+        "name": "systemd-logind",
+        "username": "root",
+        "cmdline": "/usr/lib/systemd/systemd-logind",
+        "crated_time_e": 1776556571.47,
+        "start_time": "2026-04-18 19:56:11.470000",
+        "uptime_s": 5446.16
+      },
+      {
+        "pid": 672,
+        "name": "VBoxDRMClient",
+        "username": "root",
+        "cmdline": "/usr/bin/VBoxDRMClient",
+        "crated_time_e": 1776556572.11,
+        "start_time": "2026-04-18 19:56:12.110000",
+        "uptime_s": 5445.52
+      },
+      {
+        "pid": 674,
+        "name": "VBoxService",
+        "username": "root",
+        "cmdline": "/usr/sbin/VBoxService",
+        "crated_time_e": 1776556572.14,
+        "start_time": "2026-04-18 19:56:12.140000",
+        "uptime_s": 5445.49
+      },
+      {
+        "pid": 691,
+        "name": "NetworkManager",
+        "username": "root",
+        "cmdline": "/usr/sbin/NetworkManager --no-daemon",
+        "crated_time_e": 1776556572.29,
+        "start_time": "2026-04-18 19:56:12.290000",
+        "uptime_s": 5445.34
+      },
+      {
+        "pid": 701,
+        "name": "ModemManager",
+        "username": "root",
+        "cmdline": "/usr/sbin/ModemManager",
+        "crated_time_e": 1776556572.43,
+        "start_time": "2026-04-18 19:56:12.430000",
+        "uptime_s": 5445.2
+      },
+      {
+        "pid": 704,
+        "name": "kworker/u42:1",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556572.51,
+        "start_time": "2026-04-18 19:56:12.510000",
+        "uptime_s": 5445.12
+      },
+      {
+        "pid": 705,
+        "name": "kworker/7:2H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556572.65,
+        "start_time": "2026-04-18 19:56:12.650000",
+        "uptime_s": 5444.98
+      },
+      {
+        "pid": 741,
+        "name": "kworker/R-rpciod",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556573.05,
+        "start_time": "2026-04-18 19:56:13.050000",
+        "uptime_s": 5444.58
+      },
+      {
+        "pid": 742,
+        "name": "kworker/R-xprtiod",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556573.05,
+        "start_time": "2026-04-18 19:56:13.050000",
+        "uptime_s": 5444.58
+      },
+      {
+        "pid": 747,
+        "name": "cron",
+        "username": "root",
+        "cmdline": "/usr/sbin/cron -f",
+        "crated_time_e": 1776556573.07,
+        "start_time": "2026-04-18 19:56:13.070000",
+        "uptime_s": 5444.56
+      },
+      {
+        "pid": 773,
+        "name": "lightdm",
+        "username": "root",
+        "cmdline": "/usr/sbin/lightdm",
+        "crated_time_e": 1776556573.36,
+        "start_time": "2026-04-18 19:56:13.360000",
+        "uptime_s": 5444.27
+      },
+      {
+        "pid": 781,
+        "name": "containerd",
+        "username": "root",
+        "cmdline": "/usr/bin/containerd",
+        "crated_time_e": 1776556573.4,
+        "start_time": "2026-04-18 19:56:13.400000",
+        "uptime_s": 5444.23
+      },
+      {
+        "pid": 785,
+        "name": "kworker/u44:1",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556573.46,
+        "start_time": "2026-04-18 19:56:13.460000",
+        "uptime_s": 5444.17
+      },
+      {
+        "pid": 786,
+        "name": "kworker/u47:1",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556573.5,
+        "start_time": "2026-04-18 19:56:13.500000",
+        "uptime_s": 5444.13
+      },
+      {
+        "pid": 787,
+        "name": "Xorg",
+        "username": "root",
+        "cmdline": "/usr/lib/xorg/Xorg :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch",
+        "crated_time_e": 1776556573.5,
+        "start_time": "2026-04-18 19:56:13.500000",
+        "uptime_s": 5444.13
+      },
+      {
+        "pid": 789,
+        "name": "agetty",
+        "username": "root",
+        "cmdline": "/usr/sbin/agetty --noreset --noclear --issue-file=/etc/issue:/etc/issue.d:/run/issue.d:/usr/lib/issue.d - linux",
+        "crated_time_e": 1776556573.5,
+        "start_time": "2026-04-18 19:56:13.500000",
+        "uptime_s": 5444.13
+      },
+      {
+        "pid": 809,
+        "name": "dockerd",
+        "username": "root",
+        "cmdline": "/usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock",
+        "crated_time_e": 1776556575.98,
+        "start_time": "2026-04-18 19:56:15.980000",
+        "uptime_s": 5441.65
+      },
+      {
+        "pid": 819,
+        "name": "kworker/u45:1",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556576.16,
+        "start_time": "2026-04-18 19:56:16.160000",
+        "uptime_s": 5441.47
+      },
+      {
+        "pid": 877,
+        "name": "rtkit-daemon",
+        "username": "rtkit",
+        "cmdline": "/usr/libexec/rtkit-daemon",
+        "crated_time_e": 1776556576.89,
+        "start_time": "2026-04-18 19:56:16.890000",
+        "uptime_s": 5440.74
+      },
+      {
+        "pid": 1181,
+        "name": "lightdm",
+        "username": "root",
+        "cmdline": "lightdm --session-child 13 24",
+        "crated_time_e": 1776556623.61,
+        "start_time": "2026-04-18 19:57:03.610000",
+        "uptime_s": 5394.02
+      },
+      {
+        "pid": 1205,
+        "name": "systemd",
+        "username": "kali",
+        "cmdline": "/usr/lib/systemd/systemd --user",
+        "crated_time_e": 1776556625.8,
+        "start_time": "2026-04-18 19:57:05.800000",
+        "uptime_s": 5391.83
+      },
+      {
+        "pid": 1207,
+        "name": "(sd-pam)",
+        "username": "kali",
+        "cmdline": "(sd-pam)",
+        "crated_time_e": 1776556625.81,
+        "start_time": "2026-04-18 19:57:05.810000",
+        "uptime_s": 5391.82
+      },
+      {
+        "pid": 1228,
+        "name": "dbus-daemon",
+        "username": "kali",
+        "cmdline": "/usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only",
+        "crated_time_e": 1776556625.96,
+        "start_time": "2026-04-18 19:57:05.960000",
+        "uptime_s": 5391.67
+      },
+      {
+        "pid": 1230,
+        "name": "pipewire",
+        "username": "kali",
+        "cmdline": "/usr/bin/pipewire",
+        "crated_time_e": 1776556625.97,
+        "start_time": "2026-04-18 19:57:05.970000",
+        "uptime_s": 5391.66
+      },
+      {
+        "pid": 1231,
+        "name": "gnome-keyring-daemon",
+        "username": "kali",
+        "cmdline": "/usr/bin/gnome-keyring-daemon --foreground --components=pkcs11,secrets --control-directory=/run/user/1000/keyring",
+        "crated_time_e": 1776556625.98,
+        "start_time": "2026-04-18 19:57:05.980000",
+        "uptime_s": 5391.65
+      },
+      {
+        "pid": 1232,
+        "name": "mpris-proxy",
+        "username": "kali",
+        "cmdline": "/usr/bin/mpris-proxy",
+        "crated_time_e": 1776556625.99,
+        "start_time": "2026-04-18 19:57:05.990000",
+        "uptime_s": 5391.64
+      },
+      {
+        "pid": 1233,
+        "name": "wireplumber",
+        "username": "kali",
+        "cmdline": "/usr/bin/wireplumber",
+        "crated_time_e": 1776556626.0,
+        "start_time": "2026-04-18 19:57:06",
+        "uptime_s": 5391.63
+      },
+      {
+        "pid": 1234,
+        "name": "pipewire",
+        "username": "kali",
+        "cmdline": "/usr/bin/pipewire -c filter-chain.conf",
+        "crated_time_e": 1776556626.0,
+        "start_time": "2026-04-18 19:57:06",
+        "uptime_s": 5391.63
+      },
+      {
+        "pid": 1235,
+        "name": "pipewire-pulse",
+        "username": "kali",
+        "cmdline": "/usr/bin/pipewire-pulse",
+        "crated_time_e": 1776556626.0,
+        "start_time": "2026-04-18 19:57:06",
+        "uptime_s": 5391.63
+      },
+      {
+        "pid": 1255,
+        "name": "xfce4-session",
+        "username": "kali",
+        "cmdline": "xfce4-session",
+        "crated_time_e": 1776556626.1,
+        "start_time": "2026-04-18 19:57:06.100000",
+        "uptime_s": 5391.53
+      },
+      {
+        "pid": 1322,
+        "name": "VBoxClient",
+        "username": "kali",
+        "cmdline": "/usr/bin/VBoxClient --clipboard",
+        "crated_time_e": 1776556626.59,
+        "start_time": "2026-04-18 19:57:06.590000",
+        "uptime_s": 5391.04
+      },
+      {
+        "pid": 1324,
+        "name": "VBoxClient",
+        "username": "kali",
+        "cmdline": "/usr/bin/VBoxClient --clipboard",
+        "crated_time_e": 1776556626.59,
+        "start_time": "2026-04-18 19:57:06.590000",
+        "uptime_s": 5391.04
+      },
+      {
+        "pid": 1330,
+        "name": "VBoxClient",
+        "username": "kali",
+        "cmdline": "/usr/bin/VBoxClient --seamless",
+        "crated_time_e": 1776556626.61,
+        "start_time": "2026-04-18 19:57:06.610000",
+        "uptime_s": 5391.02
+      },
+      {
+        "pid": 1332,
+        "name": "VBoxClient",
+        "username": "kali",
+        "cmdline": "/usr/bin/VBoxClient --seamless",
+        "crated_time_e": 1776556626.61,
+        "start_time": "2026-04-18 19:57:06.610000",
+        "uptime_s": 5391.02
+      },
+      {
+        "pid": 1338,
+        "name": "VBoxClient",
+        "username": "kali",
+        "cmdline": "/usr/bin/VBoxClient --draganddrop",
+        "crated_time_e": 1776556626.63,
+        "start_time": "2026-04-18 19:57:06.630000",
+        "uptime_s": 5391.0
+      },
+      {
+        "pid": 1340,
+        "name": "VBoxClient",
+        "username": "kali",
+        "cmdline": "/usr/bin/VBoxClient --draganddrop",
+        "crated_time_e": 1776556626.63,
+        "start_time": "2026-04-18 19:57:06.630000",
+        "uptime_s": 5391.0
+      },
+      {
+        "pid": 1354,
+        "name": "VBoxClient",
+        "username": "kali",
+        "cmdline": "/usr/bin/VBoxClient --vmsvga-session",
+        "crated_time_e": 1776556626.65,
+        "start_time": "2026-04-18 19:57:06.650000",
+        "uptime_s": 5390.98
+      },
+      {
+        "pid": 1356,
+        "name": "VBoxClient",
+        "username": "kali",
+        "cmdline": "/usr/bin/VBoxClient --vmsvga-session",
+        "crated_time_e": 1776556626.65,
+        "start_time": "2026-04-18 19:57:06.650000",
+        "uptime_s": 5390.98
+      },
+      {
+        "pid": 1373,
+        "name": "at-spi-bus-launcher",
+        "username": "kali",
+        "cmdline": "/usr/libexec/at-spi-bus-launcher",
+        "crated_time_e": 1776556626.85,
+        "start_time": "2026-04-18 19:57:06.850000",
+        "uptime_s": 5390.78
+      },
+      {
+        "pid": 1380,
+        "name": "dbus-daemon",
+        "username": "kali",
+        "cmdline": "/usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 12 --address=unix:path=/run/user/1000/at-spi/bus_0",
+        "crated_time_e": 1776556626.92,
+        "start_time": "2026-04-18 19:57:06.920000",
+        "uptime_s": 5390.71
+      },
+      {
+        "pid": 1390,
+        "name": "at-spi2-registryd",
+        "username": "kali",
+        "cmdline": "/usr/libexec/at-spi2-registryd --use-gnome-session",
+        "crated_time_e": 1776556627.04,
+        "start_time": "2026-04-18 19:57:07.040000",
+        "uptime_s": 5390.59
+      },
+      {
+        "pid": 1398,
+        "name": "ssh-agent",
+        "username": "kali",
+        "cmdline": "/usr/bin/ssh-agent -s",
+        "crated_time_e": 1776556627.16,
+        "start_time": "2026-04-18 19:57:07.160000",
+        "uptime_s": 5390.47
+      },
+      {
+        "pid": 1407,
+        "name": "gpg-agent",
+        "username": "kali",
+        "cmdline": "/usr/bin/gpg-agent --supervised",
+        "crated_time_e": 1776556627.24,
+        "start_time": "2026-04-18 19:57:07.240000",
+        "uptime_s": 5390.39
+      },
+      {
+        "pid": 1410,
+        "name": "xfwm4",
+        "username": "kali",
+        "cmdline": "xfwm4",
+        "crated_time_e": 1776556627.31,
+        "start_time": "2026-04-18 19:57:07.310000",
+        "uptime_s": 5390.32
+      },
+      {
+        "pid": 1415,
+        "name": "gvfsd",
+        "username": "kali",
+        "cmdline": "/usr/libexec/gvfsd",
+        "crated_time_e": 1776556627.47,
+        "start_time": "2026-04-18 19:57:07.470000",
+        "uptime_s": 5390.16
+      },
+      {
+        "pid": 1421,
+        "name": "gvfsd-fuse",
+        "username": "kali",
+        "cmdline": "/usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f",
+        "crated_time_e": 1776556627.56,
+        "start_time": "2026-04-18 19:57:07.560000",
+        "uptime_s": 5390.07
+      },
+      {
+        "pid": 1446,
+        "name": "xfsettingsd",
+        "username": "kali",
+        "cmdline": "xfsettingsd",
+        "crated_time_e": 1776556628.3,
+        "start_time": "2026-04-18 19:57:08.300000",
+        "uptime_s": 5389.33
+      },
+      {
+        "pid": 1452,
+        "name": "dconf-service",
+        "username": "kali",
+        "cmdline": "/usr/libexec/dconf-service",
+        "crated_time_e": 1776556628.71,
+        "start_time": "2026-04-18 19:57:08.710000",
+        "uptime_s": 5388.92
+      },
+      {
+        "pid": 1456,
+        "name": "xfce4-panel",
+        "username": "kali",
+        "cmdline": "xfce4-panel",
+        "crated_time_e": 1776556628.8,
+        "start_time": "2026-04-18 19:57:08.800000",
+        "uptime_s": 5388.83
+      },
+      {
+        "pid": 1462,
+        "name": "Thunar",
+        "username": "kali",
+        "cmdline": "Thunar --daemon",
+        "crated_time_e": 1776556628.88,
+        "start_time": "2026-04-18 19:57:08.880000",
+        "uptime_s": 5388.75
+      },
+      {
+        "pid": 1469,
+        "name": "xfdesktop",
+        "username": "kali",
+        "cmdline": "xfdesktop",
+        "crated_time_e": 1776556629.04,
+        "start_time": "2026-04-18 19:57:09.040000",
+        "uptime_s": 5388.59
+      },
+      {
+        "pid": 1474,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "cmdline": "/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libwhiskermenu.so 1 25165831 whiskermenu Whisker Menu Show a menu to easily access installed applications",
+        "crated_time_e": 1776556629.12,
+        "start_time": "2026-04-18 19:57:09.120000",
+        "uptime_s": 5388.51
+      },
+      {
+        "pid": 1479,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "cmdline": "/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libcpugraph.so 13 25165836 cpugraph CPU Graph Graphical representation of the CPU load",
+        "crated_time_e": 1776556629.34,
+        "start_time": "2026-04-18 19:57:09.340000",
+        "uptime_s": 5388.29
+      },
+      {
+        "pid": 1480,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "cmdline": "/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libsystray.so 14 25165837 systray Status Tray Plugin Provides status notifier items (application indicators) and legacy systray items",
+        "crated_time_e": 1776556629.35,
+        "start_time": "2026-04-18 19:57:09.350000",
+        "uptime_s": 5388.28
+      },
+      {
+        "pid": 1481,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "cmdline": "/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libgenmon.so 15 25165838 genmon Generic Monitor Show output of a command.",
+        "crated_time_e": 1776556629.36,
+        "start_time": "2026-04-18 19:57:09.360000",
+        "uptime_s": 5388.27
+      },
+      {
+        "pid": 1482,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "cmdline": "/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libpulseaudio-plugin.so 16 25165839 pulseaudio PulseAudio Plugin Adjust the audio volume of the PulseAudio sound system",
+        "crated_time_e": 1776556629.36,
+        "start_time": "2026-04-18 19:57:09.360000",
+        "uptime_s": 5388.27
+      },
+      {
+        "pid": 1483,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "cmdline": "/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libnotification-plugin.so 17 25165840 notification-plugin Notification Plugin Notification plugin for the Xfce panel",
+        "crated_time_e": 1776556629.37,
+        "start_time": "2026-04-18 19:57:09.370000",
+        "uptime_s": 5388.26
+      },
+      {
+        "pid": 1486,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "cmdline": "/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libxfce4powermanager.so 18 25165841 power-manager-plugin Power Manager Plugin Display the battery levels of your devices and control the brightness of your display",
+        "crated_time_e": 1776556629.39,
+        "start_time": "2026-04-18 19:57:09.390000",
+        "uptime_s": 5388.24
+      },
+      {
+        "pid": 1492,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "cmdline": "/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libactions.so 22 25165842 actions Action Buttons Log out, lock or other system actions",
+        "crated_time_e": 1776556629.46,
+        "start_time": "2026-04-18 19:57:09.460000",
+        "uptime_s": 5388.17
+      },
+      {
+        "pid": 1517,
+        "name": "polkit-mate-authentication-agent-1",
+        "username": "kali",
+        "cmdline": "/usr/libexec/polkit-mate-authentication-agent-1",
+        "crated_time_e": 1776556629.69,
+        "start_time": "2026-04-18 19:57:09.690000",
+        "uptime_s": 5387.94
+      },
+      {
+        "pid": 1518,
+        "name": "blueman-applet",
+        "username": "kali",
+        "cmdline": "/usr/bin/python3 /usr/bin/blueman-applet",
+        "crated_time_e": 1776556629.7,
+        "start_time": "2026-04-18 19:57:09.700000",
+        "uptime_s": 5387.93
+      },
+      {
+        "pid": 1520,
+        "name": "xcape",
+        "username": "kali",
+        "cmdline": "xcape -e Super_L Control_L Escape",
+        "crated_time_e": 1776556629.72,
+        "start_time": "2026-04-18 19:57:09.720000",
+        "uptime_s": 5387.91
+      },
+      {
+        "pid": 1527,
+        "name": "agent",
+        "username": "kali",
+        "cmdline": "/usr/libexec/geoclue-2.0/demos/agent",
+        "crated_time_e": 1776556629.79,
+        "start_time": "2026-04-18 19:57:09.790000",
+        "uptime_s": 5387.84
+      },
+      {
+        "pid": 1531,
+        "name": "xiccd",
+        "username": "kali",
+        "cmdline": "xiccd",
+        "crated_time_e": 1776556629.81,
+        "start_time": "2026-04-18 19:57:09.810000",
+        "uptime_s": 5387.82
+      },
+      {
+        "pid": 1534,
+        "name": "upowerd",
+        "username": "root",
+        "cmdline": "/usr/libexec/upowerd",
+        "crated_time_e": 1776556629.83,
+        "start_time": "2026-04-18 19:57:09.830000",
+        "uptime_s": 5387.8
+      },
+      {
+        "pid": 1536,
+        "name": "xfce4-screensaver",
+        "username": "kali",
+        "cmdline": "xfce4-screensaver",
+        "crated_time_e": 1776556629.84,
+        "start_time": "2026-04-18 19:57:09.840000",
+        "uptime_s": 5387.79
+      },
+      {
+        "pid": 1544,
+        "name": "applet.py",
+        "username": "kali",
+        "cmdline": "/usr/bin/python3 /usr/share/system-config-printer/applet.py",
+        "crated_time_e": 1776556629.88,
+        "start_time": "2026-04-18 19:57:09.880000",
+        "uptime_s": 5387.75
+      },
+      {
+        "pid": 1549,
+        "name": "xfce4-power-manager",
+        "username": "kali",
+        "cmdline": "xfce4-power-manager",
+        "crated_time_e": 1776556629.93,
+        "start_time": "2026-04-18 19:57:09.930000",
+        "uptime_s": 5387.7
+      },
+      {
+        "pid": 1576,
+        "name": "xfce4-notifyd",
+        "username": "kali",
+        "cmdline": "/usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd",
+        "crated_time_e": 1776556630.05,
+        "start_time": "2026-04-18 19:57:10.050000",
+        "uptime_s": 5387.58
+      },
+      {
+        "pid": 1577,
+        "name": "colord",
+        "username": "colord",
+        "cmdline": "/usr/libexec/colord",
+        "crated_time_e": 1776556630.05,
+        "start_time": "2026-04-18 19:57:10.050000",
+        "uptime_s": 5387.58
+      },
+      {
+        "pid": 1578,
+        "name": "xautoresize",
+        "username": "kali",
+        "cmdline": "xautoresize",
+        "crated_time_e": 1776556630.05,
+        "start_time": "2026-04-18 19:57:10.050000",
+        "uptime_s": 5387.58
+      },
+      {
+        "pid": 1590,
+        "name": "nm-applet",
+        "username": "kali",
+        "cmdline": "nm-applet",
+        "crated_time_e": 1776556630.09,
+        "start_time": "2026-04-18 19:57:10.090000",
+        "uptime_s": 5387.54
+      },
+      {
+        "pid": 1703,
+        "name": "gvfs-udisks2-volume-monitor",
+        "username": "kali",
+        "cmdline": "/usr/libexec/gvfs-udisks2-volume-monitor",
+        "crated_time_e": 1776556632.48,
+        "start_time": "2026-04-18 19:57:12.480000",
+        "uptime_s": 5385.15
+      },
+      {
+        "pid": 1709,
+        "name": "udisksd",
+        "username": "root",
+        "cmdline": "/usr/libexec/udisks2/udisksd",
+        "crated_time_e": 1776556632.57,
+        "start_time": "2026-04-18 19:57:12.570000",
+        "uptime_s": 5385.06
+      },
+      {
+        "pid": 1717,
+        "name": "obexd",
+        "username": "kali",
+        "cmdline": "/usr/libexec/bluetooth/obexd",
+        "crated_time_e": 1776556632.75,
+        "start_time": "2026-04-18 19:57:12.750000",
+        "uptime_s": 5384.88
+      },
+      {
+        "pid": 1720,
+        "name": "gvfs-afc-volume-monitor",
+        "username": "kali",
+        "cmdline": "/usr/libexec/gvfs-afc-volume-monitor",
+        "crated_time_e": 1776556632.82,
+        "start_time": "2026-04-18 19:57:12.820000",
+        "uptime_s": 5384.81
+      },
+      {
+        "pid": 1726,
+        "name": "gvfs-mtp-volume-monitor",
+        "username": "kali",
+        "cmdline": "/usr/libexec/gvfs-mtp-volume-monitor",
+        "crated_time_e": 1776556632.91,
+        "start_time": "2026-04-18 19:57:12.910000",
+        "uptime_s": 5384.72
+      },
+      {
+        "pid": 1736,
+        "name": "gvfs-gphoto2-volume-monitor",
+        "username": "kali",
+        "cmdline": "/usr/libexec/gvfs-gphoto2-volume-monitor",
+        "crated_time_e": 1776556632.98,
+        "start_time": "2026-04-18 19:57:12.980000",
+        "uptime_s": 5384.65
+      },
+      {
+        "pid": 1742,
+        "name": "gvfs-goa-volume-monitor",
+        "username": "kali",
+        "cmdline": "/usr/libexec/gvfs-goa-volume-monitor",
+        "crated_time_e": 1776556633.07,
+        "start_time": "2026-04-18 19:57:13.070000",
+        "uptime_s": 5384.56
+      },
+      {
+        "pid": 1763,
+        "name": "gvfsd-metadata",
+        "username": "kali",
+        "cmdline": "/usr/libexec/gvfsd-metadata",
+        "crated_time_e": 1776556633.3,
+        "start_time": "2026-04-18 19:57:13.300000",
+        "uptime_s": 5384.33
+      },
+      {
+        "pid": 1767,
+        "name": "gvfsd-trash",
+        "username": "kali",
+        "cmdline": "/usr/libexec/gvfsd-trash --spawner :1.24 /org/gtk/gvfs/exec_spaw/0",
+        "crated_time_e": 1776556633.35,
+        "start_time": "2026-04-18 19:57:13.350000",
+        "uptime_s": 5384.28
+      },
+      {
+        "pid": 1789,
+        "name": "kworker/2:3-cgroup_release",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556636.1,
+        "start_time": "2026-04-18 19:57:16.100000",
+        "uptime_s": 5381.53
+      },
+      {
+        "pid": 1806,
+        "name": "kworker/5:2H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776556640.96,
+        "start_time": "2026-04-18 19:57:20.960000",
+        "uptime_s": 5376.67
+      },
+      {
+        "pid": 1821,
+        "name": "xdg-desktop-portal",
+        "username": "kali",
+        "cmdline": "/usr/libexec/xdg-desktop-portal",
+        "crated_time_e": 1776556663.11,
+        "start_time": "2026-04-18 19:57:43.110000",
+        "uptime_s": 5354.52
+      },
+      {
+        "pid": 1831,
+        "name": "xdg-permission-store",
+        "username": "kali",
+        "cmdline": "/usr/libexec/xdg-permission-store",
+        "crated_time_e": 1776556663.18,
+        "start_time": "2026-04-18 19:57:43.180000",
+        "uptime_s": 5354.45
+      },
+      {
+        "pid": 1836,
+        "name": "xdg-document-portal",
+        "username": "kali",
+        "cmdline": "/usr/libexec/xdg-document-portal",
+        "crated_time_e": 1776556663.24,
+        "start_time": "2026-04-18 19:57:43.240000",
+        "uptime_s": 5354.39
+      },
+      {
+        "pid": 1842,
+        "name": "fusermount3",
+        "username": "kali",
+        "cmdline": "fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc",
+        "crated_time_e": 1776556663.26,
+        "start_time": "2026-04-18 19:57:43.260000",
+        "uptime_s": 5354.37
+      },
+      {
+        "pid": 1847,
+        "name": "xdg-desktop-portal-gtk",
+        "username": "kali",
+        "cmdline": "/usr/libexec/xdg-desktop-portal-gtk",
+        "crated_time_e": 1776556663.27,
+        "start_time": "2026-04-18 19:57:43.270000",
+        "uptime_s": 5354.36
+      },
+      {
+        "pid": 2316,
+        "name": "kworker/u38:2-kvfree_rcu_reclaim",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776557467.22,
+        "start_time": "2026-04-18 20:11:07.220000",
+        "uptime_s": 4550.41
+      },
+      {
+        "pid": 2318,
+        "name": "kworker/u36:1-ext4-rsv-conversion",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776557478.99,
+        "start_time": "2026-04-18 20:11:18.990000",
+        "uptime_s": 4538.64
+      },
+      {
+        "pid": 2695,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/usr/share/code/code .",
+        "crated_time_e": 1776558401.26,
+        "start_time": "2026-04-18 20:26:41.260000",
+        "uptime_s": 3616.37
+      },
+      {
+        "pid": 2696,
+        "name": "kworker/u35:0-iou_exit",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776558401.28,
+        "start_time": "2026-04-18 20:26:41.280000",
+        "uptime_s": 3616.35
+      },
+      {
+        "pid": 2703,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/usr/share/code/code --type=zygote --no-zygote-sandbox",
+        "crated_time_e": 1776558401.34,
+        "start_time": "2026-04-18 20:26:41.340000",
+        "uptime_s": 3616.29
+      },
+      {
+        "pid": 2704,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/usr/share/code/code --type=zygote",
+        "crated_time_e": 1776558401.36,
+        "start_time": "2026-04-18 20:26:41.360000",
+        "uptime_s": 3616.27
+      },
+      {
+        "pid": 2706,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/usr/share/code/code --type=zygote",
+        "crated_time_e": 1776558401.51,
+        "start_time": "2026-04-18 20:26:41.510000",
+        "uptime_s": 3616.12
+      },
+      {
+        "pid": 2721,
+        "name": "chrome_crashpad_handler",
+        "username": "kali",
+        "cmdline": "/usr/share/code/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --no-rate-limit --database=/home/kali/.config/Code/Crashpad --url=appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=c8dbb2c7-5d37-4d28-af54-127d21c8286f&iid=c8dbb2c7-5d37-4d28-af54-127d21c8286f&sid=c8dbb2c7-5d37-4d28-af54-127d21c8286f --annotation=_companyName=Microsoft --annotation=_productName=VSCode --annotation=_version=1.109.5 --annotation=lsb-release=Kali GNU/Linux Rolling --annotation=plat=Linux --annotation=prod=Electron --annotation=ver=39.3.0 --initial-client-fd=48 --shared-client-connection",
+        "crated_time_e": 1776558401.94,
+        "start_time": "2026-04-18 20:26:41.940000",
+        "uptime_s": 3615.69
+      },
+      {
+        "pid": 2736,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/usr/share/code/code --type=zygote --no-zygote-sandbox",
+        "crated_time_e": 1776558402.2,
+        "start_time": "2026-04-18 20:26:42.200000",
+        "uptime_s": 3615.43
+      },
+      {
+        "pid": 2744,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/proc/self/exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=2721 --enable-crash-reporter=b1e5b3a8-135c-4858-8fef-65de5f4bc9d1,no_channel --user-data-dir=/home/kali/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,3752514706471048851,5590895969693082021,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708989122997041",
+        "crated_time_e": 1776558402.24,
+        "start_time": "2026-04-18 20:26:42.240000",
+        "uptime_s": 3615.39
+      },
+      {
+        "pid": 2778,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/usr/share/code/code --type=zygote",
+        "crated_time_e": 1776558402.84,
+        "start_time": "2026-04-18 20:26:42.840000",
+        "uptime_s": 3614.79
+      },
+      {
+        "pid": 2801,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --crashpad-handler-pid=2721 --enable-crash-reporter=b1e5b3a8-135c-4858-8fef-65de5f4bc9d1,no_channel --user-data-dir=/home/kali/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,3752514706471048851,5590895969693082021,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708990997080739",
+        "crated_time_e": 1776558404.79,
+        "start_time": "2026-04-18 20:26:44.790000",
+        "uptime_s": 3612.84
+      },
+      {
+        "pid": 2810,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=2721 --enable-crash-reporter=b1e5b3a8-135c-4858-8fef-65de5f4bc9d1,no_channel --user-data-dir=/home/kali/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,3752514706471048851,5590895969693082021,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708991934122588",
+        "crated_time_e": 1776558404.9,
+        "start_time": "2026-04-18 20:26:44.900000",
+        "uptime_s": 3612.73
+      },
+      {
+        "pid": 2811,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=2721 --enable-crash-reporter=b1e5b3a8-135c-4858-8fef-65de5f4bc9d1,no_channel --user-data-dir=/home/kali/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,3752514706471048851,5590895969693082021,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708992871164437",
+        "crated_time_e": 1776558404.91,
+        "start_time": "2026-04-18 20:26:44.910000",
+        "uptime_s": 3612.72
+      },
+      {
+        "pid": 2845,
+        "name": "pcscd",
+        "username": "pcscd",
+        "cmdline": "/usr/sbin/pcscd --foreground --auto-exit",
+        "crated_time_e": 1776558405.06,
+        "start_time": "2026-04-18 20:26:45.060000",
+        "uptime_s": 3612.57
+      },
+      {
+        "pid": 2874,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=2721 --enable-crash-reporter=b1e5b3a8-135c-4858-8fef-65de5f4bc9d1,no_channel --user-data-dir=/home/kali/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,3752514706471048851,5590895969693082021,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708993808206286",
+        "crated_time_e": 1776558406.14,
+        "start_time": "2026-04-18 20:26:46.140000",
+        "uptime_s": 3611.49
+      },
+      {
+        "pid": 2897,
+        "name": "zsh",
+        "username": "kali",
+        "cmdline": "/usr/bin/zsh",
+        "crated_time_e": 1776558409.31,
+        "start_time": "2026-04-18 20:26:49.310000",
+        "uptime_s": 3608.32
+      },
+      {
+        "pid": 2903,
+        "name": "zsh",
+        "username": "kali",
+        "cmdline": "/usr/bin/zsh -i",
+        "crated_time_e": 1776558409.45,
+        "start_time": "2026-04-18 20:26:49.450000",
+        "uptime_s": 3608.18
+      },
+      {
+        "pid": 3027,
+        "name": "pet",
+        "username": "kali",
+        "cmdline": "/home/kali/.vscode/extensions/ms-python.vscode-python-envs-1.20.1-linux-x64/python-env-tools/bin/pet server",
+        "crated_time_e": 1776558414.85,
+        "start_time": "2026-04-18 20:26:54.850000",
+        "uptime_s": 3602.78
+      },
+      {
+        "pid": 3057,
+        "name": "zsh",
+        "username": "kali",
+        "cmdline": "/usr/bin/zsh -i",
+        "crated_time_e": 1776558416.11,
+        "start_time": "2026-04-18 20:26:56.110000",
+        "uptime_s": 3601.52
+      },
+      {
+        "pid": 3132,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/usr/share/code/code /home/kali/.vscode/extensions/kisstkondoros.vscode-gutter-preview-0.32.2/dist/server.js --node-ipc --clientProcessId=2801",
+        "crated_time_e": 1776558416.83,
+        "start_time": "2026-04-18 20:26:56.830000",
+        "uptime_s": 3600.8
+      },
+      {
+        "pid": 3423,
+        "name": "code",
+        "username": "kali",
+        "cmdline": "/usr/share/code/code /home/kali/.vscode/extensions/ms-python.vscode-pylance-2026.2.1/dist/server.bundle.js --cancellationReceive=file:390bb013fad87fee96f2644b363bf38e2bf1efd591 --node-ipc --clientProcessId=2801",
+        "crated_time_e": 1776558420.39,
+        "start_time": "2026-04-18 20:27:00.390000",
+        "uptime_s": 3597.24
+      },
+      {
+        "pid": 5726,
+        "name": "kworker/4:2-mm_percpu_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776558843.18,
+        "start_time": "2026-04-18 20:34:03.180000",
+        "uptime_s": 3174.45
+      },
+      {
+        "pid": 7019,
+        "name": "qterminal",
+        "username": "kali",
+        "cmdline": "/usr/bin/qterminal",
+        "crated_time_e": 1776559122.45,
+        "start_time": "2026-04-18 20:38:42.450000",
+        "uptime_s": 2895.18
+      },
+      {
+        "pid": 7026,
+        "name": "zsh",
+        "username": "kali",
+        "cmdline": "/usr/bin/zsh",
+        "crated_time_e": 1776559122.82,
+        "start_time": "2026-04-18 20:38:42.820000",
+        "uptime_s": 2894.81
+      },
+      {
+        "pid": 7205,
+        "name": "kworker/4:2H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776559144.0,
+        "start_time": "2026-04-18 20:39:04",
+        "uptime_s": 2873.63
+      },
+      {
+        "pid": 8058,
+        "name": "kworker/5:0H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776559335.2,
+        "start_time": "2026-04-18 20:42:15.200000",
+        "uptime_s": 2682.43
+      },
+      {
+        "pid": 11466,
+        "name": "kworker/6:2H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560131.08,
+        "start_time": "2026-04-18 20:55:31.080000",
+        "uptime_s": 1886.55
+      },
+      {
+        "pid": 11467,
+        "name": "kworker/u37:0-events_unbound",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560132.21,
+        "start_time": "2026-04-18 20:55:32.210000",
+        "uptime_s": 1885.42
+      },
+      {
+        "pid": 11470,
+        "name": "kworker/0:2H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560136.11,
+        "start_time": "2026-04-18 20:55:36.110000",
+        "uptime_s": 1881.52
+      },
+      {
+        "pid": 11904,
+        "name": "kworker/1:1-events",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560400.41,
+        "start_time": "2026-04-18 21:00:00.410000",
+        "uptime_s": 1617.22
+      },
+      {
+        "pid": 11927,
+        "name": "kworker/0:1-mm_percpu_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560418.29,
+        "start_time": "2026-04-18 21:00:18.290000",
+        "uptime_s": 1599.34
+      },
+      {
+        "pid": 12047,
+        "name": "kworker/6:1-events",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560528.29,
+        "start_time": "2026-04-18 21:02:08.290000",
+        "uptime_s": 1489.34
+      },
+      {
+        "pid": 12227,
+        "name": "kworker/0:0-mm_percpu_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560730.24,
+        "start_time": "2026-04-18 21:05:30.240000",
+        "uptime_s": 1287.39
+      },
+      {
+        "pid": 12230,
+        "name": "kworker/u34:2-ext4-rsv-conversion",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560735.13,
+        "start_time": "2026-04-18 21:05:35.130000",
+        "uptime_s": 1282.5
+      },
+      {
+        "pid": 12268,
+        "name": "kworker/5:0-ata_sff",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560798.41,
+        "start_time": "2026-04-18 21:06:38.410000",
+        "uptime_s": 1219.22
+      },
+      {
+        "pid": 12278,
+        "name": "kworker/4:0-mm_percpu_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560806.21,
+        "start_time": "2026-04-18 21:06:46.210000",
+        "uptime_s": 1211.42
+      },
+      {
+        "pid": 12327,
+        "name": "kworker/3:2-events",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560865.49,
+        "start_time": "2026-04-18 21:07:45.490000",
+        "uptime_s": 1152.14
+      },
+      {
+        "pid": 12339,
+        "name": "kworker/7:2-mm_percpu_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560883.66,
+        "start_time": "2026-04-18 21:08:03.660000",
+        "uptime_s": 1133.97
+      },
+      {
+        "pid": 12393,
+        "name": "kworker/2:1-mm_percpu_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560954.36,
+        "start_time": "2026-04-18 21:09:14.360000",
+        "uptime_s": 1063.27
+      },
+      {
+        "pid": 12420,
+        "name": "kworker/4:0H",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560975.25,
+        "start_time": "2026-04-18 21:09:35.250000",
+        "uptime_s": 1042.38
+      },
+      {
+        "pid": 12431,
+        "name": "kworker/5:5-events",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776560988.7,
+        "start_time": "2026-04-18 21:09:48.700000",
+        "uptime_s": 1028.93
+      },
+      {
+        "pid": 12509,
+        "name": "kworker/u37:2-events_unbound",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776561053.89,
+        "start_time": "2026-04-18 21:10:53.890000",
+        "uptime_s": 963.74
+      },
+      {
+        "pid": 12535,
+        "name": "kworker/u38:0-kvfree_rcu_reclaim",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776561085.03,
+        "start_time": "2026-04-18 21:11:25.030000",
+        "uptime_s": 932.6
+      },
+      {
+        "pid": 12619,
+        "name": "kworker/7:0-mm_percpu_wq",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776561205.51,
+        "start_time": "2026-04-18 21:13:25.510000",
+        "uptime_s": 812.12
+      },
+      {
+        "pid": 12665,
+        "name": "kworker/3:0-events",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776561274.9,
+        "start_time": "2026-04-18 21:14:34.900000",
+        "uptime_s": 742.73
+      },
+      {
+        "pid": 12697,
+        "name": "kworker/2:1H-kblockd",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776561309.84,
+        "start_time": "2026-04-18 21:15:09.840000",
+        "uptime_s": 707.79
+      },
+      {
+        "pid": 12719,
+        "name": "kworker/1:1H",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776561334.91,
+        "start_time": "2026-04-18 21:15:34.910000",
+        "uptime_s": 682.72
+      },
+      {
+        "pid": 12741,
+        "name": "kworker/7:1H",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776561355.2,
+        "start_time": "2026-04-18 21:15:55.200000",
+        "uptime_s": 662.43
+      },
+      {
+        "pid": 12949,
+        "name": "kworker/u38:1-kvfree_rcu_reclaim",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776561416.53,
+        "start_time": "2026-04-18 21:16:56.530000",
+        "uptime_s": 601.1
+      },
+      {
+        "pid": 14203,
+        "name": "kworker/5:1-ata_sff",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776561701.84,
+        "start_time": "2026-04-18 21:21:41.840000",
+        "uptime_s": 315.79
+      },
+      {
+        "pid": 14595,
+        "name": "kworker/5:2-ata_sff",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776561786.62,
+        "start_time": "2026-04-18 21:23:06.620000",
+        "uptime_s": 231.01
+      },
+      {
+        "pid": 15239,
+        "name": "kworker/0:2-events",
+        "username": "root",
+        "cmdline": "",
+        "crated_time_e": 1776561933.31,
+        "start_time": "2026-04-18 21:25:33.310000",
+        "uptime_s": 84.32
+      },
+      {
+        "pid": 15268,
+        "name": "systemd-userwork:",
+        "username": "root",
+        "cmdline": "systemd-userwork: waiting...",
+        "crated_time_e": 1776561939.28,
+        "start_time": "2026-04-18 21:25:39.280000",
+        "uptime_s": 78.35
+      },
+      {
+        "pid": 15331,
+        "name": "systemd-userwork:",
+        "username": "root",
+        "cmdline": "systemd-userwork: waiting...",
+        "crated_time_e": 1776561953.61,
+        "start_time": "2026-04-18 21:25:53.610000",
+        "uptime_s": 64.02
+      },
+      {
+        "pid": 15440,
+        "name": "systemd-userwork:",
+        "username": "root",
+        "cmdline": "systemd-userwork: waiting...",
+        "crated_time_e": 1776561978.19,
+        "start_time": "2026-04-18 21:26:18.190000",
+        "uptime_s": 39.44
+      },
+      {
+        "pid": 15617,
+        "name": "ldt",
+        "username": "kali",
+        "cmdline": "/home/kali/cyber_port/linux_diagnostic_tool/venv/bin/python3 /home/kali/cyber_port/linux_diagnostic_tool/venv/bin/ldt scan --save-baseline",
+        "crated_time_e": 1776562016.66,
+        "start_time": "2026-04-18 21:26:56.660000",
+        "uptime_s": 0.97
+      }
+    ],
+    "cpu": [
+      {
+        "pid": 1,
+        "name": "systemd",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.3534963842882521
+      },
+      {
+        "pid": 2,
+        "name": "kthreadd",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 3,
+        "name": "pool_workqueue_release",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 4,
+        "name": "kworker/R-rcu_gp",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 5,
+        "name": "kworker/R-sync_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 6,
+        "name": "kworker/R-kvfree_rcu_reclaim",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 7,
+        "name": "kworker/R-slub_flushwq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 8,
+        "name": "kworker/R-netns",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12,
+        "name": "kworker/u32:0-ipv6_addrconf",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 13,
+        "name": "kworker/R-mm_percpu_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 14,
+        "name": "ksoftirqd/0",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 15,
+        "name": "rcu_preempt",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 1.9,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 16,
+        "name": "rcu_exp_par_gp_kthread_worker/0",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 17,
+        "name": "rcu_exp_gp_kthread_worker",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 18,
+        "name": "migration/0",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 19,
+        "name": "idle_inject/0",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 20,
+        "name": "cpuhp/0",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 21,
+        "name": "cpuhp/1",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 22,
+        "name": "idle_inject/1",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 23,
+        "name": "migration/1",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 24,
+        "name": "ksoftirqd/1",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 26,
+        "name": "kworker/1:0H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 27,
+        "name": "cpuhp/2",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 28,
+        "name": "idle_inject/2",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 29,
+        "name": "migration/2",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 30,
+        "name": "ksoftirqd/2",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 32,
+        "name": "kworker/2:0H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 33,
+        "name": "cpuhp/3",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 34,
+        "name": "idle_inject/3",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 35,
+        "name": "migration/3",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 36,
+        "name": "ksoftirqd/3",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 38,
+        "name": "kworker/3:0H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 39,
+        "name": "cpuhp/4",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 40,
+        "name": "idle_inject/4",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 41,
+        "name": "migration/4",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 42,
+        "name": "ksoftirqd/4",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 45,
+        "name": "cpuhp/5",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 46,
+        "name": "idle_inject/5",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 47,
+        "name": "migration/5",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 48,
+        "name": "ksoftirqd/5",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 51,
+        "name": "cpuhp/6",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 52,
+        "name": "idle_inject/6",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 53,
+        "name": "migration/6",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 54,
+        "name": "ksoftirqd/6",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 55,
+        "name": "kworker/6:0-mm_percpu_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 57,
+        "name": "cpuhp/7",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 58,
+        "name": "idle_inject/7",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 59,
+        "name": "migration/7",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 60,
+        "name": "ksoftirqd/7",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 63,
+        "name": "kworker/u33:0-kvfree_rcu_reclaim",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 66,
+        "name": "kworker/u36:0-kvfree_rcu_reclaim",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 69,
+        "name": "kworker/u39:0-kvfree_rcu_reclaim",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 70,
+        "name": "kworker/u40:0-events_unbound",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 74,
+        "name": "kdevtmpfs",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 75,
+        "name": "kworker/R-inet_frag_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 76,
+        "name": "rcu_tasks_kthread",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 77,
+        "name": "rcu_tasks_rude_kthread",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 78,
+        "name": "rcu_tasks_trace_kthread",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 79,
+        "name": "kauditd",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 80,
+        "name": "khungtaskd",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 81,
+        "name": "kworker/u33:1-kvfree_rcu_reclaim",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 82,
+        "name": "oom_reaper",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 84,
+        "name": "kworker/R-writeback",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 85,
+        "name": "kcompactd0",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 86,
+        "name": "ksmd",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 87,
+        "name": "khugepaged",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 88,
+        "name": "kworker/R-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 89,
+        "name": "kworker/R-blkcg_punt_bio",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 90,
+        "name": "kworker/R-kintegrityd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 91,
+        "name": "irq/9-acpi",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 94,
+        "name": "kworker/R-tpm_dev_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 95,
+        "name": "kworker/R-edac-poller",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 96,
+        "name": "kworker/R-devfreq_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 99,
+        "name": "kworker/R-quota_events_unbound",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 101,
+        "name": "kswapd0",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 28.8,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 102,
+        "name": "kdamond.0",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 106,
+        "name": "kworker/R-kthrotld",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 107,
+        "name": "kworker/R-acpi_thermal_pm",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 110,
+        "name": "kworker/R-mld",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 113,
+        "name": "kworker/R-ipv6_addrconf",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 115,
+        "name": "kworker/u32:1-ipv6_addrconf",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 116,
+        "name": "kworker/R-kstrp",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 118,
+        "name": "kworker/u35:1-events_unbound",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 120,
+        "name": "kworker/u34:1-kvfree_rcu_reclaim",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 125,
+        "name": "kworker/u41:0",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 126,
+        "name": "kworker/u42:0-ttm",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 127,
+        "name": "kworker/u43:0",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 128,
+        "name": "kworker/u44:0-ttm",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 129,
+        "name": "kworker/u45:0-ttm",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 130,
+        "name": "kworker/u46:0",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 131,
+        "name": "kworker/u47:0-ttm",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 132,
+        "name": "kworker/u48:0",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 133,
+        "name": "kworker/u49:0",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 137,
+        "name": "kworker/u37:1-writeback",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 160,
+        "name": "kworker/u39:1-events_unbound",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 164,
+        "name": "kworker/u39:2",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 197,
+        "name": "kworker/0:1H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 232,
+        "name": "kworker/3:1H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 266,
+        "name": "kworker/6:1H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 278,
+        "name": "kworker/R-ata_sff",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 279,
+        "name": "scsi_eh_0",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 280,
+        "name": "kworker/R-scsi_tmf_0",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 281,
+        "name": "scsi_eh_1",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 282,
+        "name": "kworker/R-scsi_tmf_1",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 285,
+        "name": "scsi_eh_2",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 286,
+        "name": "kworker/R-scsi_tmf_2",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 288,
+        "name": "kworker/u40:1-kvfree_rcu_reclaim",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 291,
+        "name": "irq/18-vmwgfx",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 292,
+        "name": "kworker/R-ttm",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 299,
+        "name": "kworker/1:3-events",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 331,
+        "name": "jbd2/sda1-8",
+        "username": "root",
+        "status": "disk-sleep",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 332,
+        "name": "kworker/R-ext4-rsv-conversion",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 345,
+        "name": "kworker/u40:2-writeback",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 386,
+        "name": "psimon",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 396,
+        "name": "systemd-journald",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.43683619739174295
+      },
+      {
+        "pid": 405,
+        "name": "kworker/u35:2-flush-8:0",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 435,
+        "name": "systemd-udevd",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.2914899683189084
+      },
+      {
+        "pid": 439,
+        "name": "systemd-userdbd",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.14265463223815247
+      },
+      {
+        "pid": 443,
+        "name": "psimon",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 444,
+        "name": "psimon",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 569,
+        "name": "haveged",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.11165142425348064
+      },
+      {
+        "pid": 578,
+        "name": "accounts-daemon",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.18910959982933281
+      },
+      {
+        "pid": 580,
+        "name": "dbus-daemon",
+        "username": "messagebus",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.16169518762423712
+      },
+      {
+        "pid": 586,
+        "name": "polkitd",
+        "username": "polkitd",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.26128427050747566
+      },
+      {
+        "pid": 587,
+        "name": "systemd-logind",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.21612525694780896
+      },
+      {
+        "pid": 672,
+        "name": "VBoxDRMClient",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0666917882371237
+      },
+      {
+        "pid": 674,
+        "name": "VBoxService",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.09141460360753727
+      },
+      {
+        "pid": 691,
+        "name": "NetworkManager",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.4268673202262536
+      },
+      {
+        "pid": 701,
+        "name": "ModemManager",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.2545054340349429
+      },
+      {
+        "pid": 704,
+        "name": "kworker/u42:1",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 705,
+        "name": "kworker/7:2H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 741,
+        "name": "kworker/R-rpciod",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 742,
+        "name": "kworker/R-xprtiod",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 747,
+        "name": "cron",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.07456720119786028
+      },
+      {
+        "pid": 773,
+        "name": "lightdm",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.17664850337247115
+      },
+      {
+        "pid": 781,
+        "name": "containerd",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.5922509924017219
+      },
+      {
+        "pid": 785,
+        "name": "kworker/u44:1",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 786,
+        "name": "kworker/u47:1",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 787,
+        "name": "Xorg",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 1.9,
+        "memory_percent": 3.216956661303411
+      },
+      {
+        "pid": 789,
+        "name": "agetty",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.06599396683553944
+      },
+      {
+        "pid": 809,
+        "name": "dockerd",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.6635284641349706
+      },
+      {
+        "pid": 819,
+        "name": "kworker/u45:1",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 877,
+        "name": "rtkit-daemon",
+        "username": "rtkit",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.08084759381211856
+      },
+      {
+        "pid": 1181,
+        "name": "lightdm",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.2521129035152255
+      },
+      {
+        "pid": 1205,
+        "name": "systemd",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.32329068647681936
+      },
+      {
+        "pid": 1207,
+        "name": "(sd-pam)",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.09600028710366236
+      },
+      {
+        "pid": 1228,
+        "name": "dbus-daemon",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.1452465403011797
+      },
+      {
+        "pid": 1230,
+        "name": "pipewire",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.19359559455380304
+      },
+      {
+        "pid": 1231,
+        "name": "gnome-keyring-daemon",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.24433717932614377
+      },
+      {
+        "pid": 1232,
+        "name": "mpris-proxy",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.09320900149732536
+      },
+      {
+        "pid": 1233,
+        "name": "wireplumber",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.4574717731243059
+      },
+      {
+        "pid": 1234,
+        "name": "pipewire",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.09709686359186619
+      },
+      {
+        "pid": 1235,
+        "name": "pipewire-pulse",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.16777620269518562
+      },
+      {
+        "pid": 1255,
+        "name": "xfce4-session",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.7519524045928612
+      },
+      {
+        "pid": 1322,
+        "name": "VBoxClient",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0393770648036829
+      },
+      {
+        "pid": 1324,
+        "name": "VBoxClient",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.3013591567127428
+      },
+      {
+        "pid": 1330,
+        "name": "VBoxClient",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.040373952520231834
+      },
+      {
+        "pid": 1332,
+        "name": "VBoxClient",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.08224323661528707
+      },
+      {
+        "pid": 1338,
+        "name": "VBoxClient",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0408723963785063
+      },
+      {
+        "pid": 1340,
+        "name": "VBoxClient",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.08134603767039303
+      },
+      {
+        "pid": 1354,
+        "name": "VBoxClient",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.04057333006354162
+      },
+      {
+        "pid": 1356,
+        "name": "VBoxClient",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 1.9,
+        "memory_percent": 0.08264199170190664
+      },
+      {
+        "pid": 1373,
+        "name": "at-spi-bus-launcher",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.1850223601914822
+      },
+      {
+        "pid": 1380,
+        "name": "dbus-daemon",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.1302932245529457
+      },
+      {
+        "pid": 1390,
+        "name": "at-spi2-registryd",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.18960804368760728
+      },
+      {
+        "pid": 1398,
+        "name": "ssh-agent",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.019638688016014004
+      },
+      {
+        "pid": 1407,
+        "name": "gpg-agent",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.08882269554451004
+      },
+      {
+        "pid": 1410,
+        "name": "xfwm4",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 2.7506125875018195
+      },
+      {
+        "pid": 1415,
+        "name": "gvfsd",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.18123418686859624
+      },
+      {
+        "pid": 1421,
+        "name": "gvfsd-fuse",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.1909039977191209
+      },
+      {
+        "pid": 1446,
+        "name": "xfsettingsd",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.5613474731887048
+      },
+      {
+        "pid": 1452,
+        "name": "dconf-service",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.151526932915438
+      },
+      {
+        "pid": 1456,
+        "name": "xfce4-panel",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 1.2703340171983069
+      },
+      {
+        "pid": 1462,
+        "name": "Thunar",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.4648487422267681
+      },
+      {
+        "pid": 1469,
+        "name": "xfdesktop",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 1.1622713887244025
+      },
+      {
+        "pid": 1474,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.6342199652684319
+      },
+      {
+        "pid": 1479,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.8989933427838289
+      },
+      {
+        "pid": 1480,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.5050233172036901
+      },
+      {
+        "pid": 1481,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.5050233172036901
+      },
+      {
+        "pid": 1482,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.5559642795193406
+      },
+      {
+        "pid": 1483,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.5543692591728623
+      },
+      {
+        "pid": 1486,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.5619456058186342
+      },
+      {
+        "pid": 1492,
+        "name": "wrapper-2.0",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.5657337791415201
+      },
+      {
+        "pid": 1517,
+        "name": "polkit-mate-authentication-agent-1",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.3196022019255883
+      },
+      {
+        "pid": 1518,
+        "name": "blueman-applet",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.8659963593660591
+      },
+      {
+        "pid": 1520,
+        "name": "xcape",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.05094096231565054
+      },
+      {
+        "pid": 1527,
+        "name": "agent",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.1610970549943078
+      },
+      {
+        "pid": 1531,
+        "name": "xiccd",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.18741489071119963
+      },
+      {
+        "pid": 1534,
+        "name": "upowerd",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.2577951634995544
+      },
+      {
+        "pid": 1536,
+        "name": "xfce4-screensaver",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.6976220240409442
+      },
+      {
+        "pid": 1544,
+        "name": "applet.py",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.6960270036944658
+      },
+      {
+        "pid": 1549,
+        "name": "xfce4-power-manager",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.4242754121632264
+      },
+      {
+        "pid": 1576,
+        "name": "xfce4-notifyd",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.4282629630294222
+      },
+      {
+        "pid": 1577,
+        "name": "colord",
+        "username": "colord",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.3580820677843772
+      },
+      {
+        "pid": 1578,
+        "name": "xautoresize",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.08204385907197728
+      },
+      {
+        "pid": 1590,
+        "name": "nm-applet",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.6081015070948499
+      },
+      {
+        "pid": 1703,
+        "name": "gvfs-udisks2-volume-monitor",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.263776489798848
+      },
+      {
+        "pid": 1709,
+        "name": "udisksd",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.28999463674408493
+      },
+      {
+        "pid": 1717,
+        "name": "obexd",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.40762738729685927
+      },
+      {
+        "pid": 1720,
+        "name": "gvfs-afc-volume-monitor",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.21193832853830344
+      },
+      {
+        "pid": 1726,
+        "name": "gvfs-mtp-volume-monitor",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.16986966689993838
+      },
+      {
+        "pid": 1736,
+        "name": "gvfs-gphoto2-volume-monitor",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.17555192688426732
+      },
+      {
+        "pid": 1742,
+        "name": "gvfs-goa-volume-monitor",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.1634895855140252
+      },
+      {
+        "pid": 1763,
+        "name": "gvfsd-metadata",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.1648852283171937
+      },
+      {
+        "pid": 1767,
+        "name": "gvfsd-trash",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.21781996606594212
+      },
+      {
+        "pid": 1789,
+        "name": "kworker/2:3-cgroup_release",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 1806,
+        "name": "kworker/5:2H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 1821,
+        "name": "xdg-desktop-portal",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.42317883567502257
+      },
+      {
+        "pid": 1831,
+        "name": "xdg-permission-store",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.16578242726208778
+      },
+      {
+        "pid": 1836,
+        "name": "xdg-document-portal",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.17824352371894944
+      },
+      {
+        "pid": 1842,
+        "name": "fusermount3",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.04834905425262331
+      },
+      {
+        "pid": 1847,
+        "name": "xdg-desktop-portal-gtk",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.37911639860355967
+      },
+      {
+        "pid": 2316,
+        "name": "kworker/u38:2-kvfree_rcu_reclaim",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 2318,
+        "name": "kworker/u36:1-ext4-rsv-conversion",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 2695,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 3.8486844072804707
+      },
+      {
+        "pid": 2696,
+        "name": "kworker/u35:0-iou_exit",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 2703,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.9744577429265832
+      },
+      {
+        "pid": 2704,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 1.0197164452579048
+      },
+      {
+        "pid": 2706,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.16887277918338944
+      },
+      {
+        "pid": 2721,
+        "name": "chrome_crashpad_handler",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.061408283339414345
+      },
+      {
+        "pid": 2736,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 2.5457521617510133
+      },
+      {
+        "pid": 2744,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 1.5987088310295259
+      },
+      {
+        "pid": 2778,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 8.516910206335819
+      },
+      {
+        "pid": 2801,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 1.9,
+        "memory_percent": 8.381134099341855
+      },
+      {
+        "pid": 2810,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 2.819198462400386
+      },
+      {
+        "pid": 2811,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 2.377577203969208
+      },
+      {
+        "pid": 2845,
+        "name": "pcscd",
+        "username": "pcscd",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.17375752899447924
+      },
+      {
+        "pid": 2874,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 2.0721308076186147
+      },
+      {
+        "pid": 2897,
+        "name": "zsh",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.10856107233217893
+      },
+      {
+        "pid": 2903,
+        "name": "zsh",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.10945827127707297
+      },
+      {
+        "pid": 3027,
+        "name": "pet",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.00348910700792127
+      },
+      {
+        "pid": 3057,
+        "name": "zsh",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.10846138356052405
+      },
+      {
+        "pid": 3132,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 1.899569543883994
+      },
+      {
+        "pid": 3423,
+        "name": "code",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 19.147920193156963
+      },
+      {
+        "pid": 5726,
+        "name": "kworker/4:2-mm_percpu_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 7019,
+        "name": "qterminal",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 1.3761038039241489
+      },
+      {
+        "pid": 7026,
+        "name": "zsh",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.15092880028550865
+      },
+      {
+        "pid": 7205,
+        "name": "kworker/4:2H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 8058,
+        "name": "kworker/5:0H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 11466,
+        "name": "kworker/6:2H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 11467,
+        "name": "kworker/u37:0-events_unbound",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 11470,
+        "name": "kworker/0:2H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 11904,
+        "name": "kworker/1:1-events",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 11927,
+        "name": "kworker/0:1-mm_percpu_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12047,
+        "name": "kworker/6:1-events",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12227,
+        "name": "kworker/0:0-mm_percpu_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12230,
+        "name": "kworker/u34:2-ext4-rsv-conversion",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12268,
+        "name": "kworker/5:0-ata_sff",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12278,
+        "name": "kworker/4:0-mm_percpu_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12327,
+        "name": "kworker/3:2-events",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12339,
+        "name": "kworker/7:2-mm_percpu_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12393,
+        "name": "kworker/2:1-mm_percpu_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12420,
+        "name": "kworker/4:0H",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12431,
+        "name": "kworker/5:5-events",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12509,
+        "name": "kworker/u37:2-events_unbound",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12535,
+        "name": "kworker/u38:0-kvfree_rcu_reclaim",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12619,
+        "name": "kworker/7:0-mm_percpu_wq",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12665,
+        "name": "kworker/3:0-events",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12697,
+        "name": "kworker/2:1H-kblockd",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12719,
+        "name": "kworker/1:1H",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12741,
+        "name": "kworker/7:1H",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 12949,
+        "name": "kworker/u38:1-kvfree_rcu_reclaim",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 14203,
+        "name": "kworker/5:1-ata_sff",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 14595,
+        "name": "kworker/5:2-ata_sff",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 15239,
+        "name": "kworker/0:2-events",
+        "username": "root",
+        "status": "idle",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.0
+      },
+      {
+        "pid": 15268,
+        "name": "systemd-userwork:",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.18143356441190603
+      },
+      {
+        "pid": 15331,
+        "name": "systemd-userwork:",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.16737744760856604
+      },
+      {
+        "pid": 15440,
+        "name": "systemd-userwork:",
+        "username": "root",
+        "status": "sleeping",
+        "cpu_percent": 0.0,
+        "memory_percent": 0.16777620269518562
+      },
+      {
+        "pid": 15617,
+        "name": "ldt",
+        "username": "kali",
+        "status": "sleeping",
+        "cpu_percent": 1.9,
+        "memory_percent": 0.7797655718845764
+      },
+      {
+        "pid": 15621,
+        "name": "find",
+        "username": "kali",
+        "status": "running",
+        "cpu_percent": 92.0,
+        "memory_percent": 0.07975101732391474
+      }
+    ],
+    "memory": {
+      "ram_total": 3.83,
+      "ram_used": 2.22,
+      "ram_free": 1.6,
+      "ram_percent": 58.1,
+      "swap_total": 0.93,
+      "swap_used": 0.62,
+      "swap_percent": 66.5
+    }
+  },
+  "network": {
+    "connections": [
+      {
+        "pid": 2801,
+        "process": "code",
+        "user": "kali",
+        "local_ip": "192.168.1.20",
+        "local_port": 42712,
+        "remote_ip": "13.107.5.93",
+        "remote_port": 443,
+        "status": "ESTABLISHED",
+        "is_public": true,
+        "root_and_public": false
+      },
+      {
+        "pid": null,
+        "process": "unknow",
+        "user": "unknow",
+        "local_ip": "127.0.0.1",
+        "local_port": 33903,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "is_public": false,
+        "root_and_public": false
+      },
+      {
+        "pid": 3423,
+        "process": "code",
+        "user": "kali",
+        "local_ip": "127.0.0.1",
+        "local_port": 57790,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "is_public": false,
+        "root_and_public": false
+      },
+      {
+        "pid": 2744,
+        "process": "code",
+        "user": "kali",
+        "local_ip": "192.168.1.20",
+        "local_port": 39984,
+        "remote_ip": "20.189.173.3",
+        "remote_port": 443,
+        "status": "ESTABLISHED",
+        "is_public": true,
+        "root_and_public": false
+      },
+      {
+        "pid": null,
+        "process": "unknow",
+        "user": "unknow",
+        "local_ip": "192.168.1.20",
+        "local_port": 68,
+        "remote_ip": "192.168.1.1",
+        "remote_port": 67,
+        "status": "NONE",
+        "is_public": false,
+        "root_and_public": false
+      },
+      {
+        "pid": null,
+        "process": "unknow",
+        "user": "unknow",
+        "local_ip": "fe80::a3be:bb44:8390:e44f",
+        "local_port": 546,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "is_public": false,
+        "root_and_public": false
+      },
+      {
+        "pid": 2744,
+        "process": "code",
+        "user": "kali",
+        "local_ip": "192.168.1.20",
+        "local_port": 42710,
+        "remote_ip": "13.107.5.93",
+        "remote_port": 443,
+        "status": "ESTABLISHED",
+        "is_public": true,
+        "root_and_public": false
+      }
+    ],
+    "interfaces": [
+      {
+        "Name": "lo",
+        "status": "UP",
+        "Ipv4": "127.0.0.1",
+        "Ipv6": "::1",
+        "mac": "00:00:00:00:00:00",
+        "speed": 0
+      },
+      {
+        "Name": "eth0",
+        "status": "UP",
+        "Ipv4": "192.168.1.20",
+        "Ipv6": "2806:265:b4c3:8f12:eff4:8f18:e25b:6646",
+        "mac": "08:00:27:d1:f8:5d",
+        "speed": 1000
+      },
+      {
+        "Name": "docker0",
+        "status": "DOWN",
+        "Ipv4": "172.17.0.1",
+        "Ipv6": null,
+        "mac": "02:42:22:9a:79:13",
+        "speed": 0
+      },
+      {
+        "Name": "br-5170880aa9da",
+        "status": "DOWN",
+        "Ipv4": "10.255.255.1",
+        "Ipv6": null,
+        "mac": "02:42:05:15:31:1e",
+        "speed": 0
+      }
+    ]
+  },
+  "forensics": {
+    "suid_binaries": [
+      {
+        "ruta": "/usr/sbin/pppd",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/sbin/mount.cifs",
+        "dueno": "root",
+        "permisos": "4755",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/sbin/mount.nfs",
+        "dueno": "root",
+        "permisos": "4755",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/share/code/chrome-sandbox",
+        "dueno": "root",
+        "permisos": "4755",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/lib/xorg/Xorg.wrap",
+        "dueno": "root",
+        "permisos": "6755",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/lib/dbus-1.0/dbus-daemon-launch-helper",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/lib/polkit-1/polkit-agent-helper-1",
+        "dueno": "root",
+        "permisos": "4755",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/lib/chromium/chrome-sandbox",
+        "dueno": "root",
+        "permisos": "4755",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/kismet_cap_nrf_52840",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/kismet_cap_rz_killerbee",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/kismet_cap_nrf_51822",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/kismet_cap_ti_cc_2540",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/rsh-redone-rsh",
+        "dueno": "root",
+        "permisos": "4755",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/fusermount3",
+        "dueno": "root",
+        "permisos": "4755",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/rsh-redone-rlogin",
+        "dueno": "root",
+        "permisos": "4755",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/kismet_cap_ti_cc_2531",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/kismet_cap_nrf_mousejack",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/kismet_cap_nxp_kw41z",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/kismet_cap_ubertooth_one",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/kismet_cap_hak5_wifi_coconut",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/kismet_cap_linux_wifi",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/kismet_cap_linux_bluetooth",
+        "dueno": "root",
+        "permisos": "4754",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      },
+      {
+        "ruta": "/usr/bin/ntfs-3g",
+        "dueno": "root",
+        "permisos": "4755",
+        "sospechosos": true,
+        "mitre": "T1548.001 - Setuid and Setgid",
+        "severity": "MEDIUM"
+      }
+    ],
+    "cron_jobs": [],
+    "bashrc_entries": []
+  },
+  "security": {
+    "failed_logins": [
+      {
+        "timestamp": "Mar 10 22:03:57",
+        "username": "usuario_falso",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "34598"
+      },
+      {
+        "timestamp": "Mar 10 22:04:01",
+        "username": "usuario_falso",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "34598"
+      },
+      {
+        "timestamp": "Mar 10 22:04:08",
+        "username": "usuario_falso",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "34598"
+      },
+      {
+        "timestamp": "Mar 11 20:33:07",
+        "username": "test",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "60968"
+      },
+      {
+        "timestamp": "Mar 11 20:33:14",
+        "username": "test",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "60968"
+      },
+      {
+        "timestamp": "Mar 11 20:33:18",
+        "username": "test",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "60968"
+      },
+      {
+        "timestamp": "Mar 11 20:33:27",
+        "username": "test",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "55416"
+      },
+      {
+        "timestamp": "Mar 11 20:33:32",
+        "username": "test",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "55416"
+      },
+      {
+        "timestamp": "Mar 11 20:33:40",
+        "username": "test",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "55416"
+      },
+      {
+        "timestamp": "Mar 11 20:33:46",
+        "username": "admin",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "42470"
+      },
+      {
+        "timestamp": "Mar 11 20:33:51",
+        "username": "admin",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "42470"
+      },
+      {
+        "timestamp": "Mar 11 20:33:57",
+        "username": "admin",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "42470"
+      },
+      {
+        "timestamp": "Mar 11 20:34:06",
+        "username": "root",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "36100"
+      },
+      {
+        "timestamp": "Mar 11 20:34:10",
+        "username": "root",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "36100"
+      },
+      {
+        "timestamp": "Mar 11 20:34:14",
+        "username": "root",
+        "status": "Failed",
+        "remote_ip": "::1",
+        "port": "36100"
+      }
+    ]
+  }
+}

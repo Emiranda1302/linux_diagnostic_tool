@@ -16,4 +16,8 @@ reports/*.md
 .env
 
 # Editor
-.vscode/
+.vscode/    
+
+COMPLETE_IMPROVEMENT_PLAN.md
+quick_setup.sh
+translate_helper.py

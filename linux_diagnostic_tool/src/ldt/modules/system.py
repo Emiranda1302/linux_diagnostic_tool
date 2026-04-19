@@ -110,8 +110,32 @@ def get_listening_ports()->list[dict]:
                 process_name="unknown"
                 print("no hay mai")
     return conections
-
-
+def get_failed_logins()->list[dict]:
+    result=subprocess.run(
+        ["journalctl","-u","ssh","--no-pager"],
+        capture_output=True,
+        text=True,
+        check=True
+    )
+    log_patern=r"([A-Z][a-z]{2}\s\d{2}\s\d{2}:\d{2}:\d{2}).*?(\w+)\spassword.*?user\s(\S+)\sfrom\s(\S+)\sport\s(\d+)"
+    log_root_patern=r"([A-Z][a-z]{2}\s\d{2}\s\d{2}:\d{2}:\d{2}).*?(\w+)\spassword.*?for\s(\S+)\sfrom\s(\S+)\sport\s(\d+)"
+    
+    failed_attempts=[]
+    for line in result.stdout.splitlines():
+        match=re.search(log_patern,line)
+        if not match:
+            match=re.search(log_root_patern,line)
+        if match:   
+            timestamp,status,username,ip_address,port_num =match.groups()
+            failed_attempts.append({
+                    "timestamp":timestamp,
+                    "username":username,
+                    "status":status,
+                    "remote_ip":ip_address,
+                    "port":port_num
+                })
+            
+    return failed_attempts
 
 
 def register_parser(subparsers):
@@ -145,37 +169,6 @@ def register_parser(subparsers):
     
 
     parser.set_defaults(func=run)
-
-def get_failed_logins()->list[dict]:
-    result=subprocess.run(
-        ["journalctl","-u","ssh","--no-pager"],
-        capture_output=True,
-        text=True,
-        check=True
-    )
-    log_patern=r"([A-Z][a-z]{2}\s\d{2}\s\d{2}:\d{2}:\d{2}).*?(\w+)\spassword.*?user\s(\S+)\sfrom\s(\S+)\sport\s(\d+)"
-    log_root_patern=r"([A-Z][a-z]{2}\s\d{2}\s\d{2}:\d{2}:\d{2}).*?(\w+)\spassword.*?for\s(\S+)\sfrom\s(\S+)\sport\s(\d+)"
-    
-    failed_attempts=[]
-    for line in result.stdout.splitlines():
-        match=re.search(log_patern,line)
-        if not match:
-            match=re.search(log_root_patern,line)
-        if match:   
-            timestamp,status,username,ip_address,port_num =match.groups()
-            failed_attempts.append({
-                    "timestamp":timestamp,
-                    "username":username,
-                    "status":status,
-                    "remote_ip":ip_address,
-                    "port":port_num
-                })
-            
-    return failed_attempts
-
-
-
-
 
 def run(args):
 
