@@ -33,7 +33,7 @@ def get_running_processes() -> list[dict]:
                 "name": info.get('name'),
                 "username": info.get('username'),
                 "cmdline": " ".join(info.get('cmdline') or []),
-                "crated_time_e":create_time,
+                "created_time_epoch":create_time,
                 "start_time":start_datetime,
                 "uptime_s":uptime_s
 
@@ -99,7 +99,7 @@ def get_listening_ports()->list[dict]:
         if conn.status=='LISTEN':
             try:
                 p=psutil.Process(conn.pid)
-                process_name=p.name()if conn.pid else "sytemkernelproces"            
+                process_name=p.name()if conn.pid else "system_kernel_process"            
                 conections.append({
                   "process":process_name,
                   "ip":conn.laddr.ip,
@@ -107,8 +107,8 @@ def get_listening_ports()->list[dict]:
                   "states":conn.status
                 })
             except (psutil.NoSuchProcess,psutil.AccessDenied):
-                process_name="unknown"
-                print("no hay mai")
+                process_name="unknownn"
+                print("Process information unavailable")
     return conections
 def get_failed_logins()->list[dict]:
     result=subprocess.run(
@@ -176,7 +176,7 @@ def run(args):
         procs=get_cpu_info()
         procs_sorted=sorted(procs,key=lambda x:x['cpu_percent'] or 0,
                             reverse=True )[:10]
-        print(f"\n{'PID':<8}{'NAME':<25}{'USUARIO':<15}{'CPU %':<10}{'MEM%':<10}{'sTATUS':^12}")
+        print(f"\n{'PID':<8}{'NAME':<25}{'USER':<15}{'CPU %':<10}{'MEM%':<10}{'sTATUS':^12}")
         print("-"*80)
         for p in procs_sorted:
             flag="[!]" if (p['cpu_percent'] or 0)> 50 else ""
@@ -209,11 +209,11 @@ def run(args):
         ))
         # Al final de la función run
         if ram_flag or swap_flag:
-            print(f"\n[ALERTA] El sistema está bajo presión de memoria.")
+            print(f"\n[ALERTA] System is under memory pressure.")
     elif args.logins:
         failed_attempts=get_failed_logins()  
         FORMAT_SECURITY = "{:<18} {:<10} {:<15} {:<20} {:<8}"  
-        print("SECURITU LOGS -FAILEDER SSH ATETEMPTS".center(65,"="))
+        print("SECURITY LOGS - FAILED SSH ATTEMPTS".center(65,"="))
         print(FORMAT_SECURITY.format("TIMESTAMP","STATUS","USERNAME","REMOTE_IP","PORT"))
         print("-"*80)
 

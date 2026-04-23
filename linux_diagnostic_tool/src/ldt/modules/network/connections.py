@@ -5,13 +5,13 @@ def get_active_conec() -> list[dict]:
     conections=[]
     for conn in psutil.net_connections(kind='inet'):
         try:
-            process_name=psutil.Process(conn.pid).name() if conn.pid else "unknow"
+            process_name=psutil.Process(conn.pid).name() if conn.pid else "unknown"
             
-            process_user=psutil.Process(conn.pid).username() if conn.pid else "unknow"
+            process_user=psutil.Process(conn.pid).username() if conn.pid else "unknown"
              
         except (psutil.NoSuchProcess,psutil.AccessDenied):
-            process_name="unknow"
-            process_user="unknow"
+            process_name="unknown"
+            process_user="unknown"
         
         remote_ip=conn.raddr.ip if conn.raddr else None
         is_public=_is_public_ip(remote_ip) if remote_ip else False
@@ -46,7 +46,7 @@ def register_parser(subparsers):
 def run(args):
     if args.active:
         conns = get_active_conec()
-        print(f"\n{'PID':<8} {'PROCESO':<20} {'USUARIO':<15} {'IP REMOTA':<20} {'PUERTO':<8} {'ESTADO':<15} {'PUBLICA':<10}{"ROOT+PUBLIC"}")
+        print(f"\n{'PID':<8} {'PROCESS':<20} {'USER':<15} {'REMOTE IP':<20} {'PORT':<8} {'STATE':<15} {'PUBLIC':<10}{"ROOT+PUBLIC"}")
         print("-" * 95)
         for c in conns:
             print(

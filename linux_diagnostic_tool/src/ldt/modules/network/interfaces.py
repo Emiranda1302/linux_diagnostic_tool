@@ -34,7 +34,7 @@ def register_parser(subparsers):
 def run(args):
     if args.list:
         ifaces=get_inter()
-        print(f"\n{'INTERFAZ':<15}{'STATUS':<8}{'IPV4':<18}{'IPV6':<20}{'MAC':<20}{'SPEED'}")
+        print(f"\n{'INTERFACE':<15}{'STATUS':<8}{'IPV4':<18}{'IPV6':<20}{'MAC':<20}{'SPEED'}")
         print("-"*75)
         for i in ifaces:
             print(

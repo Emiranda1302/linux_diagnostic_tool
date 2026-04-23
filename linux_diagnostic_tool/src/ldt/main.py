@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Main del CLI con descubrimiento automático
+CLI main with automatic module discovery
 de módulos dentro de ldt.modules
 """
 
@@ -14,7 +14,7 @@ import ldt.modules
 def main():
 
     # -------------------------------
-    # 1) Crear parser principal
+    # 1) Create main parser
     # -------------------------------
     parser = argparse.ArgumentParser(
         prog="ldt",
@@ -28,7 +28,7 @@ def main():
     )
 
     # -------------------------------
-    # 2) Descubrir módulos automáticamente
+    # 2) Auto-discover modules
     # -------------------------------
     for loader, module_name, is_pkg in pkgutil.iter_modules(ldt.modules.__path__):
 
@@ -43,12 +43,12 @@ def main():
             module.register_parser(subparsers)
 
     # -------------------------------
-    # 3) Parsear argumentos
+    # 3) Parse arguments
     # -------------------------------
     args = parser.parse_args()
 
     # -------------------------------
-    # 4) Ejecutar función asociada
+    # 4) Execute associated function
     # -------------------------------
     args.func(args)
 

@@ -32,7 +32,7 @@ def check_cron_persistence() -> list[dict]:
                         user=info[5]
                         comand=" ".join(info[6:])
                     else:
-                        user="unknow"
+                        user="unknown"
                         comand=info
                     if not info or info[0]=="#":
                         continue
@@ -51,7 +51,7 @@ def check_cron_persistence() -> list[dict]:
                             "mitre":MITRE["cron"]
                         })
         except PermissionError:
-            print(F"[!] cant READ FILE [permision denied]: {path}")
+            print(F"[!] Cannot read file [permission denied]: {path}")
         except Exception as e:
             print(f"[!] Error inesperado en {path}: {e}")
     return cron_findings
@@ -87,7 +87,7 @@ def check_bashrc_persistence()->list[dict]:
                             "mitre":MITRE["bashrc"]
                         })
         except Exception as e:
-            print(f"error leyendo {path}: {e}")
+            print(f"Error reading {path}: {e}")
 
     return bashrc_findings
 
@@ -122,27 +122,27 @@ def find_suid_binaries()->list[dict]:
             origin=pwd.getpwuid(stats.st_uid).pw_name
 
             if binari not in SUID_WHITELIST:
-                if any(binari.startswith(ruta) for ruta in SUSPICIOUS_PATHS):
+                if any(binari.startswith(path) for path in SUSPICIOUS_PATHS):
                     severity = "HIGH"
                 else:
                     severity = "MEDIUM"
                 info_binari={
-                    "ruta":binari,
-                    "dueno":origin,
-                    "permisos":oct(stats.st_mode)[-4:],
-                    "sospechosos":True,
+                    "path":binari,
+                    "owner":origin,
+                    "permissions":oct(stats.st_mode)[-4:],
+                    "suspicious":True,
                     "mitre":MITRE["suid"],
                     "severity":severity
                 }
                 reporte.append(info_binari)
         except (FileNotFoundError, PermissionError, KeyError):
             reporte.append({
-                "ruta":     binari,
-                "dueno":    "unknown",
-                "permisos": "unknown",
+                "path":     binari,
+                "owner":    "unknownn",
+                "permissions": "unknownn",
                 "severity": "UNKNOWN",
                 "mitre":    "T1548.001 - Setuid and Setgid",
-                "nota":     "No se pudo leer — posible evasión o archivo protegido"
+                "nota":     "Could not read — possible evasion or protected file"
             })
             continue
     
@@ -186,8 +186,8 @@ def run(args):
             for h in result:
                 severity = h.get('severity', 'LOW')
                 severity_flag = "[!!!]"*9 if severity == "HIGH" else ""
-                print(f"FILE:    {h['ruta']}")
-                print(f"OWNER:   {h['dueno']} (Perms: {h['permisos']})")
+                print(f"FILE:    {h['path']}")
+                print(f"OWNER:   {h['owner']} (Perms: {h['permissions']})")
                 print(f"SEVERITY:   {severity}{severity_flag}")
                 print(f"MITRE:   {h['mitre']}")
                                 

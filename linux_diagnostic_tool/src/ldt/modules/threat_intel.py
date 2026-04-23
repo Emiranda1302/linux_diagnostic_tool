@@ -22,7 +22,7 @@ def check_ip(ip:str)-> dict :
         ciclo=itertools.cycle(["|", "/", "-", "\\"])   # cicla los caracteres
         while not terminado:
             char=next(ciclo)
-            sys.stdout.write(f"\r Consultando API {char}")
+            sys.stdout.write(f"\r Querying API {char}")
             sys.stdout.flush()
             time.sleep(0.1)
             sys.stdout.write("\r" + " " * 25 + "\r")
@@ -98,14 +98,14 @@ def run(args):
 
         if result['is_malicious'] or result['is_tor']:
             print("\n" + "!" * 30)
-            print("⚠️  ALERTA DE SEGURIDAD  ⚠️")
+            print("⚠️  SECURITY ALERT  ⚠️")
             if result['is_tor']:
-                print("- Conexión anónima TOR detectada")
+                print("- Anonymous TOR connection detected")
             if result['is_malicious']:
-                print(f"- IP reportada: score {result['abuse_score']}%")
+                print(f"- Reported IP: score {result['abuse_score']}%")
             sys.stdout.write("\a")
             print("!" * 30 + "\n")
         else:
-            print("\n[+] IP aparentemente legítima.")
+            print("\n[+] IP appears legitimate.")
     else:
-        print("Usa: ldt threat_intel --ip <dirección IP>")
+        print("Usage: ldt threat_intel --ip <IP address>")

@@ -96,7 +96,7 @@ class AdvancedScanner:
             bashrc = check_bashrc_persistence()
             
             # Filter through whitelist
-            suid_filtered = [s for s in suid if is_suid_suspicious(s.get("ruta", ""))]
+            suid_filtered = [s for s in suid if is_suid_suspicious(s.get("path", ""))]
             cron_filtered = [c for c in cron if is_cron_suspicious(c.get("content", ""), c.get("user"))]
             bashrc_filtered = [b for b in bashrc if is_bashrc_suspicious(b.get("content", ""))]
             
@@ -183,8 +183,8 @@ class AdvancedScanner:
         }
         
         # Compare SUID
-        current_suid = {s["ruta"] for s in current_report["forensics"].get("suid_binaries", [])}
-        baseline_suid = {s["ruta"] for s in baseline["forensics"].get("suid_binaries", [])}
+        current_suid = {s["path"] for s in current_report["forensics"].get("suid_binaries", [])}
+        baseline_suid = {s["path"] for s in baseline["forensics"].get("suid_binaries", [])}
         
         changes["new_suid"] = list(current_suid - baseline_suid)
         changes["removed_suid"] = list(baseline_suid - current_suid)
