@@ -197,6 +197,60 @@ class AdvancedScanner:
         changes["removed_connections"] = list(baseline_conns - current_conns)
         
         return changes
+    def calculate_hash(self,filepath):
+        try:
+            sha256=hashlib.sha256()
+            with open(filepath,"rb") as f:
+                for chunk in iter(lambda:f.read(4096),b""):
+                    sha256.update(chunk)
+            return sha256.hexdigest()
+        except (FileNotFoundError,PermissionError):
+            return None
+    
+    def hash_critical_binaries(self):
+
+        hashes={}
+        for binary in CRITICAL_BINARIES:
+            hash_value=self.calculate_hash(binary)
+            if hash_value:
+                hashes[binary]=hash_value
+        return hashes
+    def save_hashes(self,hashes):
+        hash_file=self.hash_dir/"hashes_critical.json"
+        with open(hash_file,"w") as f:
+            json.dump(hashes,f,indent=2)
+
+        return str(hash_file)
+    
+    def load_hashes(self):
+        file=self.hash_dir/"hashes_critical.json"
+        try :   
+            with open(file) as f:
+                return json.load(f)
+        except (FileNotFoundError ,PermissionError,json.JSONDecodeError):
+            return {} 
+    def verify_hashes(self):
+        saved_hashes=self.load_hashes()
+        current_hashes=self.hash_critical_binaries()
+        changes={
+            "modified_binaries":[],
+            "new_binaries":[],
+            "missing_binaries":[]
+        }
+        for binary, hash_value in current_hashes.items():
+            if binary in saved_hashes:
+                if saved_hashes[binary] != hash_value:
+                    changes["modified_binaries"].append(binary)
+            else:
+                changes["new_binaries"].append(binary)
+        for binary in saved_hashes:
+            if binary not in current_hashes:
+                changes["missing_binaries"].append(binary)
+            
+        return changes
+
+
+
 
 
 def register_parser(subparsers):
@@ -208,6 +262,8 @@ def register_parser(subparsers):
     parser.add_argument("--all", action="store_true", help="Full scan")
     parser.add_argument("--save-baseline",action="store_true",help="save currente scan as baseline")
     parser.add_argument("--compare-baseline",action="store_true",help="compare with saved baseline")
+    parser.add_argument("--hash-binaries",action="store_true",help="hash critical system binaries")
+    parser.add_argument("--verify-hashes",action="store_true",help="Verify hashes against saved")
     parser.set_defaults(func=run)
 
 
@@ -244,4 +300,36 @@ def run(args):
             print(f"Removed connections: {len(changes['removed_connections'])}")
             scanner.loading=False
             hilo_spiner.join()
-                
+    elif args.hash_binaries:
+        scanner=AdvancedScanner()
+        hashes=scanner.hash_critical_binaries()
+        hash_file=scanner.save_hashes(hashes)
+
+        print(f"\n [+0 Hashes saved to : {hash_file}")
+    elif args.verify_hashes:
+        scanner = AdvancedScanner()
+        saved = scanner.load_hashes()
+        current = scanner.hash_critical_binaries()
+
+        
+
+        scanner.loading=True
+        changes=scanner.verify_hashes()
+        msg="Verifying hashes..."
+        hilo_spiner=threading.Thread(target=scanner.spiner_task,args=(msg,))
+        hilo_spiner.start() 
+        time.sleep(5)
+        
+        print("\n")
+        print(f"\nModified Binaries : {len(changes['modified_binaries'])}")
+        print(f"\nNew Binaries : {len(changes['new_binaries'])}")
+        print(f"\nMissing Binaries : {len(changes['missing_binaries'])}")
+        
+        if changes['modified_binaries']:
+            print(f"\n[!]ALERT: MODIFIED BINARIES DETECTED : ")
+            for binary in changes['modified_binaries']:
+                print(f" - {binary}")
+        scanner.loading=False
+        hilo_spiner.join()    
+        
+
