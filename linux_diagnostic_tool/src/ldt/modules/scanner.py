@@ -276,6 +276,70 @@ class AdvancedScanner:
             )
             conn["is_suspicious"]=is_suspicious
         return enhaced_conect
+    def generate_executive_summary(self,report):
+        sumary={
+            "critical":[],
+            "high":[],
+            "medium":[],
+            "low":[],
+            "statistics":{}
+        }
+        suid_BINARIES=report["forensics"].get("suid_binaries",[])
+        cron_jobs=report["forensics"].get("cron_jobs",[])
+        bashrc_entries=report["forensics"].get("bashrc_entries",[])
+        connections=report["network"].get("connections",[])
+        failed_logins=report["security"].get("failed_logins",[])
+        processes=report["system"].get("processes",[])
+
+        for suid in suid_BINARIES:
+            path=suid.get("path","unknown")
+            if any(path.startswith(sp)for sp in SUSPICIOUS_PATHS):
+                sumary["critical"].append({
+                    "type":"SUID in suspicious path",
+                    "path":path,
+                    "severity":"CRITICAL"
+                })
+            else:
+                sumary["high"].append({
+                    "type":"suspicious SUIDS binary",
+                    "path":path,
+                    "severity":"HiGH"
+                })
+                
+        for conn in connections:
+            if conn.get("is_suspicious"):
+                if conn.get("is_root"):
+                    sumary["high"].append({
+                        "type":"Root process with suspicious connections",
+                        "process":conn.get("process_name"),
+                        "remote_ip":conn.get("remote_ip"),
+                        "port":conn.get("remote_port"),
+                        "severity":"high"
+                    })
+                else:
+                    sumary["medium"].append({
+                        "type":"suspicious net connection",
+                        "process":conn.get("process_name"),
+                        "remote_ip":conn.get("remote_ip"),
+                        "severity":"MEDIUM"
+                    })
+        if len(failed_logins)>10:
+            sumary["high"].append({
+                "type":"multiple failed login attempts",
+                "count":len(failed_logins),
+                "severity":"high"
+            })
+        sumary["statistics"]={
+            "total_processes":len(processes),
+            "total_suid_binaries":len(suid_BINARIES),
+            "total_cron_jobs":len(cron_jobs),
+            "total_bashrc_entries":len(bashrc_entries),
+            "total_connections":len(connections),
+            "total_failed_logins":len(failed_logins),
+            
+            
+        }
+        return sumary
 
 
 
@@ -295,6 +359,7 @@ def register_parser(subparsers):
     parser.add_argument("--hash-binaries",action="store_true",help="hash critical system binaries")
     parser.add_argument("--verify-hashes",action="store_true",help="Verify hashes against saved")
     parser.add_argument("--network-sync", action="store_true", help="Analyze network connections with process information")
+    parser.add_argument("--executive-summary", action="store_true", help="Generate executive summary report")
     parser.set_defaults(func=run)
 
 
@@ -388,6 +453,35 @@ def run(args):
 
         scanner.loading=False
         hilo_spiner.join()
+    elif args.executive_summary:
+        scanner = AdvancedScanner()
+        report = scanner.run_full_scan()
+        summary = scanner.generate_executive_summary(report)
+
+
+
+
+
+        print(f"\n=== EXECUTIVE SUMMARY ===\n")
+        
+        print(f"CRITICAL ({len(summary['critical'])}):")
+        for finding in summary['critical']:
+            print(f"  - [{finding.get('severity', 'N/A')}] {finding.get('path', 'N/A')}")
+        print(f"HIGH ({len(summary['high'])}):")
+        for finding in summary['high']:
+            if finding['type'] == 'multiple failed login attempts':
+                print(f"  - {finding['type']}: {finding.get('count')} attempts")
+            else:
+                path_or_process = finding.get('path') or finding.get('process') or 'N/A'
+                print(f"  - {finding['type']}: {path_or_process}")
+        print(f"\nMEDIUM ({len(summary['medium'])}):")
+        for finding in summary['medium']:
+            print(f"  - {finding['type']}: {finding.get('process', '')}")
+        
+        print(f"\nSTATISTICS:")
+        for key, value in summary['statistics'].items():
+            print(f"  {key}: {value}")
+       
         
 
 
