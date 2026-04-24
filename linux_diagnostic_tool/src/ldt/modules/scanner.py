@@ -248,6 +248,36 @@ class AdvancedScanner:
                 changes["missing_binaries"].append(binary)
             
         return changes
+    
+    def sync_network_processes(self, connections, processes):
+        pid_map={}
+        enhaced_conect=[]
+        for process in processes:
+            pid_map[process['pid']]=process
+        
+        for conection in connections:
+            pid=conection["pid"]
+            process_info=pid_map.get(pid,{})
+
+            conection["process_name"]=process_info.get("name","unknown")
+            conection["user"]=process_info.get("username","unknown")
+            conection["is_root"]=process_info.get("username")=="root"
+            conection["cmdline"]=process_info.get("cmdline","unkwonw")
+            conection["uptime_seconds"]=process_info.get("uptime_s",0)
+
+            enhaced_conect.append(conection)
+        
+        for conn in enhaced_conect:
+            is_suspicious=is_connection_suspicious(
+                process_name=conn["process_name"],
+                remote_ip=conn["remote_ip"],
+                port=conn["remote_port"],
+                is_root=conn["is_root"]
+            )
+            conn["is_suspicious"]=is_suspicious
+        return enhaced_conect
+
+
 
 
 
@@ -264,6 +294,7 @@ def register_parser(subparsers):
     parser.add_argument("--compare-baseline",action="store_true",help="compare with saved baseline")
     parser.add_argument("--hash-binaries",action="store_true",help="hash critical system binaries")
     parser.add_argument("--verify-hashes",action="store_true",help="Verify hashes against saved")
+    parser.add_argument("--network-sync", action="store_true", help="Analyze network connections with process information")
     parser.set_defaults(func=run)
 
 
@@ -331,5 +362,40 @@ def run(args):
                 print(f" - {binary}")
         scanner.loading=False
         hilo_spiner.join()    
+    elif args.network_sync:
+        scanner=AdvancedScanner()
+        report=scanner.run_full_scan()
+        conections=report["network"].get("connections",[])
+        processes=report["system"].get("processes",[])
+        synced=scanner.sync_network_processes(conections,processes)
+        print(f"\nNetwork Sync Analysis")
+        
+        scanner.loading=True
+        changes=scanner.verify_hashes()
+        msg="Verifying conections"
+        hilo_spiner=threading.Thread(target=scanner.spiner_task,args=(msg,))
+        hilo_spiner.start() 
+        time.sleep(5)
+
+
+        print(f"\nTotal conetions analyzed : {len(synced)}")
+        suspicious=[c for c in synced if c.get("is_suspicious")]
+        print(f"Suspicious conections : {len(suspicious)}")
+        if suspicious:
+            print(f"\n[!] SUSPICIOUS CONECTIONS DETECTED :")
+            for conn in suspicious:
+                print(f"-{conn.get('process_name')}({conn.get('user')}) -> {conn.get('remote_ip')}:{conn.get('remote_port')}")
+
+        scanner.loading=False
+        hilo_spiner.join()
+        
+
+
+
+
+
+
+
+
         
 
