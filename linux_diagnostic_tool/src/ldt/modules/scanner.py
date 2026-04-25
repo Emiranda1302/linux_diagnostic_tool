@@ -360,6 +360,7 @@ def register_parser(subparsers):
     parser.add_argument("--verify-hashes",action="store_true",help="Verify hashes against saved")
     parser.add_argument("--network-sync", action="store_true", help="Analyze network connections with process information")
     parser.add_argument("--executive-summary", action="store_true", help="Generate executive summary report")
+    parser.add_argument("--output",type=str,help="save report to JSON File")
     parser.set_defaults(func=run)
 
 
@@ -371,11 +372,19 @@ def run(args):
         print(f"\n[+] Scan completed: {report['hostname']}")
         print(f"[+] Timestamp: {report['timestamp']}")
         print(f"[+] Forensics findings: {len(report['forensics'].get('suid_binaries', []))}")
+
+        if args.output:
+            with open(args.output, 'w') as f:
+                json.dump(report, f, indent=2, default=str)
+            print(f"[+] Report saved to: {args.output}")
+
     elif args.save_baseline:
+
         scanner=AdvancedScanner()
         report=scanner.run_full_scan()
         baseline_file=scanner.save_baseline(report)
         print(f"\n[+] Baseline saved to: {baseline_file}")
+
     elif args.compare_baseline:
         scanner=AdvancedScanner()
         report=scanner.run_full_scan()
@@ -396,12 +405,22 @@ def run(args):
             print(f"Removed connections: {len(changes['removed_connections'])}")
             scanner.loading=False
             hilo_spiner.join()
+        if args.output:
+            with open(args.output, 'w') as f:
+                json.dump(changes, f, indent=2, default=str)
+        print(f"[+] Report saved to: {args.output}")
+    
     elif args.hash_binaries:
         scanner=AdvancedScanner()
         hashes=scanner.hash_critical_binaries()
         hash_file=scanner.save_hashes(hashes)
+        if args.output:
+            with open(args.output, 'w') as f:
+                json.dump(hashes, f, indent=2, default=str)
+            print(f"[+] Report saved to: {args.output}")
 
         print(f"\n [+0 Hashes saved to : {hash_file}")
+    
     elif args.verify_hashes:
         scanner = AdvancedScanner()
         saved = scanner.load_hashes()
@@ -426,7 +445,12 @@ def run(args):
             for binary in changes['modified_binaries']:
                 print(f" - {binary}")
         scanner.loading=False
-        hilo_spiner.join()    
+        hilo_spiner.join()
+        if args.output:
+            with open(args.output, 'w') as f:
+                json.dump(changes, f, indent=2, default=str)
+            print(f"[+] Report saved to: {args.output}")    
+    
     elif args.network_sync:
         scanner=AdvancedScanner()
         report=scanner.run_full_scan()
@@ -453,6 +477,11 @@ def run(args):
 
         scanner.loading=False
         hilo_spiner.join()
+        if args.output:
+            with open(args.output, 'w') as f:
+                json.dump(synced, f, indent=2, default=str)
+        print(f"[+] Report saved to: {args.output}")
+    
     elif args.executive_summary:
         scanner = AdvancedScanner()
         report = scanner.run_full_scan()
@@ -481,6 +510,11 @@ def run(args):
         print(f"\nSTATISTICS:")
         for key, value in summary['statistics'].items():
             print(f"  {key}: {value}")
+        
+        if args.output:
+            with open(args.output, 'w') as f:
+                json.dump(summary, f, indent=2, default=str)
+        print(f"[+] Report saved to: {args.output}")
        
         
 
