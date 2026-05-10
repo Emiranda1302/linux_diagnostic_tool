@@ -32,7 +32,7 @@ def check_ip(ip:str)-> dict :
             sys.stdout.flush()
     
     hilo=threading.Thread(target=spinner)
-    hilo.start()
+    hilo.start()    
     
     try:
         response=requests.get(" https://api.abuseipdb.com/api/v2/check",

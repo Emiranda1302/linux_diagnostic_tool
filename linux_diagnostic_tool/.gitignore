@@ -21,3 +21,9 @@ reports/*.md
 COMPLETE_IMPROVEMENT_PLAN.md
 quick_setup.sh
 translate_helper.py
+
+
+report.json
+summary.json
+network.json
+hashes.json
