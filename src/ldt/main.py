@@ -2,7 +2,7 @@
 
 """
 CLI main with automatic module discovery
-de módulos dentro de ldt.modules
+of modules inside  ldt.modules
 """
 
 import argparse
@@ -32,13 +32,13 @@ def main():
     # -------------------------------
     for loader, module_name, is_pkg in pkgutil.iter_modules(ldt.modules.__path__):
 
-        #  nombre completo
+        #  full module nam
         full_module_name = f"ldt.modules.{module_name}"
 
-        # Importar dinámicamente
+        # import dynamically
         module = importlib.import_module(full_module_name)
 
-        # Si el módulo tiene register_parser, lo registramos
+        # if module has register_parser, register it
         if hasattr(module, "register_parser"):
             module.register_parser(subparsers)
 

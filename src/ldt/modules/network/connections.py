@@ -46,7 +46,7 @@ def register_parser(subparsers):
 def run(args):
     if args.active:
         conns = get_active_conec()
-        print(f"\n{'PID':<8} {'PROCESS':<20} {'USER':<15} {'REMOTE IP':<20} {'PORT':<8} {'STATE':<15} {'PUBLIC':<10}{"ROOT+PUBLIC"}")
+        print(f"\n{'PID':<8} {'PROCESS':<20} {'USER':<15} {'REMOTE IP':<20} {'PORT':<8} {'STATE':<15} {'PUBLIC':<10}{'ROOT+PUBLIC'}")
         print("-" * 95)
         for c in conns:
             print(

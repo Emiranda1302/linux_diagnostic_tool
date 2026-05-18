@@ -19,13 +19,4 @@ reports/*.md
 .vscode/    
 
 COMPLETE_IMPROVEMENT_PLAN.md
-quick_setup.sh
-translate_helper.py
-
-
-report.json
-summary.json
-network.json
-hashes.json
-reports/
-
+quick_set

@@ -1,5 +1,5 @@
 """
-Módulo de sistema.
+system module
 """
 import psutil
 import time
@@ -42,7 +42,7 @@ def get_running_processes() -> list[dict]:
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess) as e:
             name=getattr(proc,"info",{}).get("name","UNKNOW")
             pid=getattr(proc,"info",{}).get("pid","UKNOW")
-            print(f"[WARN] Proceso terminado durante escaneo -> PID : {pid} NAME: {name}")
+            print(f"[WARN] Process terminated during scan -> PID : {pid} NAME: {name}")
             continue
 
     return processes
@@ -209,7 +209,7 @@ def run(args):
         ))
         # Al final de la función run
         if ram_flag or swap_flag:
-            print(f"\n[ALERTA] System is under memory pressure.")
+            print(f"\n[Alert] System is under memory pressure.")
     elif args.logins:
         failed_attempts=get_failed_logins()  
         FORMAT_SECURITY = "{:<18} {:<10} {:<15} {:<20} {:<8}"  

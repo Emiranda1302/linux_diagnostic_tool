@@ -221,6 +221,24 @@ CRITICAL_BINARIES = [
     "/bin/ps",
     "/sbin/init",
 ]
+# ============================================================================
+# USER LOCAL WHITELIST
+# ============================================================================
+
+import json
+from pathlib import Path
+
+USER_WHITELIST_FILE = Path.home() / ".config/ldt/whitelist.json"
+
+USER_SUID_WHITELIST = set()
+
+if USER_WHITELIST_FILE.exists():
+    try:
+        with open(USER_WHITELIST_FILE) as f:
+            data = json.load(f)
+            USER_SUID_WHITELIST = set(data.get("suid_whitelist", []))
+    except Exception:
+        pass
 
 # ============================================================================
 # UTILITY FUNCTIONS
@@ -228,8 +246,11 @@ CRITICAL_BINARIES = [
 
 def is_suid_suspicious(filepath: str) -> bool:
     """Check if a SUID binary is suspicious"""
-    return filepath not in SUID_WHITELIST
 
+    if filepath in USER_SUID_WHITELIST:
+        return False
+
+    return filepath not in SUID_WHITELIST
 
 def is_cron_suspicious(command: str, user: str = None) -> bool:
     """Check if a cron job is suspicious"""
