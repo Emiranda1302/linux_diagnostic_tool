@@ -17,7 +17,7 @@ def get_running_processes() -> list[dict]:
         try:
             info = proc.info
             
-            """calc uptime if there creattime exist"""
+            """Calculate uptime if create_time exists"""
             create_time=info.get('create_time')
             uptime_s= None
             start_datetime=None
@@ -40,7 +40,7 @@ def get_running_processes() -> list[dict]:
             })
 
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess) as e:
-            name=getattr(proc,"info",{}).get("name","UNKNOW")
+            name=getattr(proc,"info",{}).get("name","UNKNOWN")
             pid=getattr(proc,"info",{}).get("pid","UKNOW")
             print(f"[WARN] Process terminated during scan -> PID : {pid} NAME: {name}")
             continue
@@ -49,14 +49,14 @@ def get_running_processes() -> list[dict]:
 
 def get_cpu_info()->list[dict]:
     
-    proces=list(psutil.process_iter(['pid','name','username','status','cpu_percent'
+    processes=list(psutil.process_iter(['pid','name','username','status','cpu_percent'
     ,'memory_percent']))
-    for proc in proces:
+    for proc in processes:
         proc.cpu_percent(interval=None)
     
     time.sleep(0.5)
     result=[]
-    for proc in proces:
+    for proc in processes:
         try:
             cpu=proc.info
             result.append({
@@ -70,7 +70,7 @@ def get_cpu_info()->list[dict]:
             })
 
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess) as e:
-            name=getattr(proc,"info",{}).get("name","UNKNOW")
+            name=getattr(proc,"info",{}).get("name","UNKNOWN")
             pid=getattr(proc,"info",{}).get("pid","UKNOW")
             print(f"[WARN] Proceso terminado durante escaneo -> PID : {pid} NAME: {name}")
             continue
@@ -94,22 +94,22 @@ def get_memory_info()-> dict:
     }
 
 def get_listening_ports()->list[dict]:
-    conections=[]
+    connections=[]
     for conn in psutil.net_connections(kind='inet'):
         if conn.status=='LISTEN':
             try:
                 p=psutil.Process(conn.pid)
                 process_name=p.name()if conn.pid else "system_kernel_process"            
-                conections.append({
+                connections.append({
                   "process":process_name,
                   "ip":conn.laddr.ip,
                   "port":conn.laddr.port,
-                  "states":conn.status
+                  "status":conn.status
                 })
             except (psutil.NoSuchProcess,psutil.AccessDenied):
-                process_name="unknownn"
+                process_name="unknown"
                 print("Process information unavailable")
-    return conections
+    return connections
 def get_failed_logins()->list[dict]:
     result=subprocess.run(
         ["journalctl","-u","ssh","--no-pager"],
@@ -176,7 +176,7 @@ def run(args):
         procs=get_cpu_info()
         procs_sorted=sorted(procs,key=lambda x:x['cpu_percent'] or 0,
                             reverse=True )[:10]
-        print(f"\n{'PID':<8}{'NAME':<25}{'USER':<15}{'CPU %':<10}{'MEM%':<10}{'sTATUS':^12}")
+        print(f"\n{'PID':<8}{'NAME':<25}{'USER':<15}{'CPU %':<10}{'MEM%':<10}{'STATUS':^12}")
         print("-"*80)
         for p in procs_sorted:
             flag="[!]" if (p['cpu_percent'] or 0)> 50 else ""
@@ -233,8 +233,8 @@ def run(args):
     elif args.ports:
         listening_sockets=get_listening_ports()
         FORMAT_ports="{:<18}{:^15}{:<10}{:<18}"
-        print("ALL ACTIVE NETWORK SERVICES LINTENING FOR CONECTIONS ".center(65,"="))
-        print(FORMAT_ports.format("PROcces","ip","port","status"))
+        print("ALL ACTIVE NETWORK SERVICES LISTENING FOR CONNECTIONS ".center(65,"="))
+        print(FORMAT_ports.format("PROCESS","ip","port","status"))
         print("-"*80)
         if not get_listening_ports:
             print("NO LISTENING SOCKETS")
@@ -244,7 +244,7 @@ def run(args):
                     ports['process'],
                     ports['ip'],
                     ports['port'],
-                    ports["states"]
+                    ports["status"]
                 ))
     else:
         print("No system option provided.")
