@@ -1,5 +1,6 @@
 # Linux Diagnostic Toolkit (LDT)
 
+[![Tests](https://github.com/Emiranda1302/linux_diagnostic_tool/actions/workflows/tests.yml/badge.svg)](https://github.com/Emiranda1302/linux_diagnostic_tool/actions/workflows/tests.yml)
 ![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Status](https://img.shields.io/badge/status-beta-orange.svg)
@@ -20,7 +21,6 @@
 - **Interface Discovery**: List all network interfaces with IP addresses
 - **Active Connections**: Monitor all active TCP/UDP connections
 - **Public IP Detection**: Identify connections to public IP addresses
-- **WiFi Security Auditing**: Scan and audit wireless networks *(coming soon)*
 
 ### Forensics & Security
 - **SUID Binary Detection**: Find suspicious setuid binaries
@@ -42,24 +42,20 @@
 - Linux operating system
 - Root/sudo access (for some features)
 
-### Option 1: Install from source (recommended for development)
+### Install from source
 
 ```bash
 # Clone the repository
 git clone https://github.com/Emiranda1302/linux_diagnostic_tool.git
 cd linux_diagnostic_tool
 
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
 # Install dependencies
 pip install -r requirements.txt
-
-# Install in development mode
 pip install -e .
-```
-
-### Option 2: Install as package
-
-```bash
-pip install git+https://github.com/Emiranda1302/linux_diagnostic_tool.git
 ```
 
 ### Configuration
@@ -69,7 +65,7 @@ pip install git+https://github.com/Emiranda1302/linux_diagnostic_tool.git
 cp .env.example .env
 ```
 
-2. Add your API keys:
+2. Add your API key:
 ```bash
 nano .env
 ```
@@ -108,12 +104,6 @@ ldt network interfaces --list
 
 # Show active connections
 ldt network connections --active
-
-# Scan WiFi networks (requires wireless adapter)
-ldt network wifi --scan
-
-# Audit your own WiFi network
-sudo ldt network wifi --audit "YourNetworkName" -i wlan0
 ```
 
 ### Forensics Commands
@@ -135,8 +125,33 @@ sudo ldt forensics --bashrc
 # Check IP reputation
 ldt threat_intel --ip 8.8.8.8
 
-# Check suspicious IP from logs
-ldt threat_intel --ip 192.0.2.1
+# Check suspicious IP
+ldt threat_intel --ip 185.220.101.1
+```
+
+### Full Scan Commands
+
+```bash
+# Run complete system scan
+ldt scan --all
+
+# Save current state as baseline
+ldt scan --save-baseline
+
+# Compare against saved baseline
+ldt scan --compare-baseline
+
+# Hash critical system binaries
+ldt scan --hash-binaries
+
+# Verify binary integrity
+ldt scan --verify-hashes
+
+# Generate executive summary
+ldt scan --executive-summary
+
+# Save report to file
+ldt scan --all --output report.json
 ```
 
 ---
@@ -145,34 +160,32 @@ ldt threat_intel --ip 192.0.2.1
 
 ### CPU Monitoring
 ```
-PID     NAME                     USUARIO        CPU %     MEM%      STATUS
+PID     NAME                     USER           CPU%      MEM%      STATUS
 --------------------------------------------------------------------------------
 1234    chrome                   user           75.2      12.3      running  [!]
 5678    python3                  user           45.1      8.7       running
-9012    firefox                  user           32.4      15.2      sleeping
 ```
 
 ### SUID Binary Detection
 ```
-[!] 12 SUSPICIOUS SUID BINARIES FOUND
+[!] Detected 1 suspicious SUID binary
 --------------------------------------------------------------------------------
-FILE:    /tmp/suspicious_binary
-OWNER:   root (Perms: 4755)
-SEVERITY:   HIGH[!!!][!!!][!!!][!!!][!!!][!!!][!!!][!!!][!!!]
-MITRE:   T1548.001 - Setuid and Setgid
-------------------------------------------------------------
+FILE:     /tmp/backdoor
+OWNER:    root (Perms: 4755)
+SEVERITY: HIGH[!!!][!!!][!!!]
+MITRE:    T1548.001 - Setuid and Setgid
 ```
 
 ### Threat Intelligence
 ```
 IP                   SCORE    REPORTS    COUNTRY    TOR    ISP
 --------------------------------------------------------------------------------
-185.220.101.1        95       847        NL         True   AS-CHOOPA [!]
+185.220.101.1        100      45         DE         True   Artikel10 e.V. [!]
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ⚠️  SECURITY ALERT  ⚠️
 - Anonymous TOR connection detected
-- Reported IP: score 95%
+- Reported IP: score 100%
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ```
 
@@ -184,15 +197,19 @@ IP                   SCORE    REPORTS    COUNTRY    TOR    ISP
 ```
 linux_diagnostic_tool/
 ├── src/ldt/
-│   ├── main.py              # CLI entry point
-│   └── modules/
-│       ├── system.py        # System diagnostics
-│       ├── forensics.py     # Security auditing
-│       ├── threat_intel.py  # IP intelligence
-│       └── network/
-│           ├── interfaces.py
-│           ├── connections.py
-│           └── wifi/        # WiFi auditing
+│   ├── main.py              # CLI entry point (auto-discovers modules)
+│   ├── modules/
+│   │   ├── system.py        # System diagnostics
+│   │   ├── forensics.py     # Security auditing + MITRE ATT&CK
+│   │   ├── threat_intel.py  # IP reputation via AbuseIPDB
+│   │   ├── scanner.py       # Full scan with multithreading
+│   │   └── network/
+│   │       ├── interfaces.py
+│   │       └── connections.py
+│   └── utils/
+│       └── whitelist.py     # False positive filtering
+├── tests/
+│   └── test_system.py
 ├── requirements.txt
 ├── pyproject.toml
 └── README.md
@@ -235,34 +252,19 @@ pytest --cov=ldt tests/
 
 ## 📋 Roadmap
 
-- [x] System diagnostics (CPU, memory, processes)
+- [x] System diagnostics (CPU, memory, processes, ports)
 - [x] Network interface monitoring
-- [x] Forensics (SUID, cron, bashrc)
-- [x] Threat intelligence integration
-- [ ] WiFi security auditing
-- [ ] Automated report generation (JSON/HTML)
-- [ ] Integration with SIEM systems
-- [ ] Docker support
-- [ ] Web dashboard
-- [ ] Scheduled scans with cron
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-Please ensure:
-- Code follows PEP 8 style guide
-- All tests pass
-- New features include tests
-- Documentation is updated
+- [x] Active connection analysis
+- [x] Forensics (SUID, cron, bashrc) with MITRE ATT&CK mapping
+- [x] Threat intelligence integration (AbuseIPDB)
+- [x] Full scan with multithreading
+- [x] Baseline comparison
+- [x] Binary integrity verification
+- [x] CI/CD with GitHub Actions
+- [ ] Automated report generation (HTML/PDF)
+- [ ] WiFi security auditing (planned)
+- [ ] SIEM integration
+- [ ] Scheduled scans
 
 ---
 
@@ -296,17 +298,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Author:** EMA  
 **GitHub:** [@Emiranda1302](https://github.com/Emiranda1302)  
 **Project Link:** [https://github.com/Emiranda1302/linux_diagnostic_tool](https://github.com/Emiranda1302/linux_diagnostic_tool)
-
----
-
-## 🐛 Bug Reports
-
-Found a bug? Please open an issue with:
-- Your OS version
-- Python version
-- Steps to reproduce
-- Expected vs actual behavior
-- Error messages/logs
 
 ---
 
